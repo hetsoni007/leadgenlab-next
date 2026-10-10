@@ -1,23 +1,11 @@
 import type { ReactNode } from "react";
 
-/** Decorative hero background: soft orbs and rings. Purely visual. */
+/** Decorative hero background: a faint dot grid and a single soft glow. */
 export function HeroArt() {
   return (
     <div className="hero-art" aria-hidden="true">
-      <span className="orb orb-a" />
-      <span className="orb orb-b" />
-      <span className="orb orb-c" />
-      <svg className="rings" viewBox="0 0 600 600" fill="none">
-        <circle cx="300" cy="300" r="120" stroke="url(#g1)" strokeWidth="1.5" />
-        <circle cx="300" cy="300" r="190" stroke="url(#g1)" strokeWidth="1.2" strokeDasharray="4 10" />
-        <circle cx="300" cy="300" r="260" stroke="url(#g1)" strokeWidth="1" />
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="600" y2="600">
-            <stop stopColor="#4338ca" stopOpacity=".55" />
-            <stop offset="1" stopColor="#0d9488" stopOpacity=".55" />
-          </linearGradient>
-        </defs>
-      </svg>
+      <span className="glow" />
+      <span className="dots" />
     </div>
   );
 }
@@ -49,28 +37,20 @@ const STAGES = [
   { icon: "measure", title: "Measure", text: "Compare time and quality before you commit." },
 ];
 
-/** Release-to-result pipeline with animated connectors. */
+/** Release-to-result timeline. */
 export function FlowDiagram() {
   return (
     <section className="section" aria-labelledby="flow-h">
       <div className="wrap">
         <p className="eyebrow">How we turn news into practice</p>
-        <h2 id="flow-h" style={{ marginBottom: 28 }}>From release note to a result you can measure</h2>
-        <ol className="flow">
+        <h2 id="flow-h" style={{ marginBottom: 40 }}>From release note to a result you can measure</h2>
+        <ol className="timeline">
           {STAGES.map((s, i) => (
             <li key={s.title}>
-              <div className="flow-node">
-                <span className="flow-icon"><Icon name={s.icon} /></span>
-                <span className="flow-num">0{i + 1}</span>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </div>
-              {i < STAGES.length - 1 && (
-                <svg className="flow-link" viewBox="0 0 80 12" aria-hidden="true">
-                  <path d="M0 6h72" className="dash" />
-                  <path d="M68 1l8 5-8 5" />
-                </svg>
-              )}
+              <span className="tl-node"><Icon name={s.icon} size={26} /></span>
+              <span className="tl-num">0{i + 1}</span>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
             </li>
           ))}
         </ol>
@@ -85,7 +65,6 @@ export function StatStrip({ stats }: { stats: { value: number; label: string }[]
       <ul className="stats" aria-label="Site at a glance">
         {stats.map((s) => (
           <li key={s.label}>
-            <span className="stat-ring" aria-hidden="true" />
             <b>{s.value}</b>
             <span>{s.label}</span>
           </li>
