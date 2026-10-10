@@ -1,0 +1,62 @@
+[
+ {
+  "slug": "writing",
+  "title": "ChatGPT vs Claude for writing and editing",
+  "intro": "Writing quality is subjective, so the useful question is: which one needs less editing from you, on your kind of writing? Run this test with your own draft and score it.",
+  "task": "Edit a rough 150-word draft into a clear version without changing the facts.",
+  "sample": "Hi team, just wanted to say that the thing we talked about last week is kind of running late and we might not hit the date, because a few things came up with the supplier, so can everyone maybe think about what we can cut or move so that we do not miss the launch completely?",
+  "prompt": "Act as a careful editor. Rewrite the text below so it is clear and about 70 words, for a team of colleagues. Keep my meaning. Do not add facts. After the rewrite, list the three biggest changes you made.",
+  "criteria": [
+   "Kept the facts and meaning",
+   "Clear and easy to read",
+   "Matched the tone I asked for",
+   "Followed length and format",
+   "Needed few edits from me"
+  ],
+  "verify": [
+   "Which plan or model you are using in each tool (they differ by plan and change over time)",
+   "Limits on message length and uploads for your plan",
+   "How each handles your data: training use, retention and deletion settings"
+  ]
+ },
+ {
+  "slug": "research-summaries",
+  "title": "ChatGPT vs Claude for research and summarising",
+  "intro": "For research, accuracy and traceability matter more than polish. Test both on a document you know well so you can tell what they got wrong.",
+  "task": "Summarise a document and quote the sentence behind each key point.",
+  "sample": "Use any public article or report you know well (500 to 1,500 words) so that you can verify the summary yourself.",
+  "prompt": "Summarise the document below in: (1) a three-sentence overview, (2) five key points, (3) what is unclear or missing. Quote the exact sentence for each key point so I can check it.",
+  "criteria": [
+   "Key points were accurate",
+   "Quotes really exist in the source",
+   "Admitted what was unclear",
+   "Did not add outside claims",
+   "Easy to scan and verify"
+  ],
+  "verify": [
+   "Whether each tool can read your file type and size on your plan",
+   "Whether web search or browsing is on, and whether sources are shown",
+   "Data handling for uploaded documents"
+  ]
+ },
+ {
+  "slug": "coding",
+  "title": "ChatGPT vs Claude for coding help",
+  "intro": "Judge on whether the code runs and whether the explanation lets you trust it. Always run it yourself in a safe environment.",
+  "task": "Find and fix a small bug and explain the cause.",
+  "sample": "def average(nums):\n    total = 0\n    for n in nums:\n        total += n\n    return total / len(nums)\n\nprint(average([]))",
+  "prompt": "This Python function crashes on an empty list. Explain why in two sentences, then give a fixed version that returns None for an empty list, and add two tests. Do not change anything else.",
+  "criteria": [
+   "The fix works when run",
+   "Explanation is correct and brief",
+   "Did not change unrelated code",
+   "Tests are meaningful",
+   "Mentioned risks or edge cases"
+  ],
+  "verify": [
+   "Which models and coding tools are available on your plan",
+   "Limits on file uploads and context size",
+   "Whether code you paste is used for training under your settings"
+  ]
+ }
+]

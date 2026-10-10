@@ -329,3 +329,20 @@ html[data-text="l"]{--prose-size:21.5px}
   .timeline h3{margin-top:14px}
 }
 .related{padding:8px 0 24px}
+
+/* prompt library + comparisons */
+.pcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:18px;padding-bottom:16px}
+.pcard{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:var(--radius);background:var(--glass-strong);border:1px solid var(--glass-line);box-shadow:var(--shadow);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.pcard-top{display:flex;justify-content:space-between;gap:10px;font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.pcard-top .tag{color:var(--accent)}.pcard-top .role{color:var(--faint)}
+.pcard h3{font-size:21px}
+.prompt-text{margin:0;padding:14px;border-radius:12px;background:rgba(255,255,255,.8);border:1px solid var(--glass-line);font:14px/1.6 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:break-word}
+.prompt-text mark{background:rgba(99,102,241,.18);color:var(--accent);padding:0 3px;border-radius:5px}
+.pcard .check{margin:0;font-size:15px}.pcard .tip{margin:0;font-size:14px}
+.pcard-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.table-wrap{overflow-x:auto}
+.score{width:100%;border-collapse:collapse;font-size:16px}
+.score th,.score td{padding:12px;border-bottom:1px solid var(--line);text-align:left}
+.score thead th{font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.score select{min-height:44px;min-width:92px;padding:0 10px;border-radius:10px;border:1.5px solid rgba(67,56,202,.22);background:rgba(255,255,255,.85);font:inherit}
+.score tfoot th,.score tfoot td{font-weight:700;border-bottom:0}

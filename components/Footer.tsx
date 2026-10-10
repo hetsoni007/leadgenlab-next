@@ -12,6 +12,8 @@ export function Footer() {
         <div>
           <h2>Learn</h2>
           <Link href="/learn">Start here: learn the basics</Link>
+          <Link href="/prompts">Prompt library</Link>
+          <Link href="/compare">ChatGPT vs Claude tests</Link>
           <Link href="/ai-updates">Release updates</Link>
           <Link href="/weekly-reset">Weekly reset</Link>
           <Link href="/guides">Guides</Link>

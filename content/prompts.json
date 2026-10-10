@@ -1,0 +1,272 @@
+[
+ {
+  "id": "01",
+  "cat": "Writing and editing",
+  "title": "Tighten a rough draft",
+  "role": "Anyone",
+  "prompt": "Act as a careful editor. Rewrite the text below so it is clear and about [target length] words, for [audience]. Keep my meaning and my voice. Do not add facts. After the rewrite, list the three biggest changes you made.\n\nText:\n[paste draft]",
+  "check": "Compare against the original: did any fact, number or promise change?",
+  "tip": "Paste only text you are allowed to share."
+ },
+ {
+  "id": "02",
+  "cat": "Writing and editing",
+  "title": "Write a polite but firm email",
+  "role": "Anyone",
+  "prompt": "Draft an email to [recipient and relationship] about [situation]. Goal: [what I want them to do] by [date]. Tone: polite and firm, no blame. Under [120] words. Give me two versions: shorter and warmer.",
+  "check": "Check names, dates and any commitment before sending.",
+  "tip": ""
+ },
+ {
+  "id": "03",
+  "cat": "Writing and editing",
+  "title": "Turn notes into meeting minutes",
+  "role": "Operations",
+  "prompt": "Turn these raw notes into meeting minutes with: decisions, action items (owner and due date), and open questions. If an owner or date is missing, write “unassigned” instead of guessing.\n\nNotes:\n[paste notes]",
+  "check": "Confirm every owner and date against what was actually said.",
+  "tip": ""
+ },
+ {
+  "id": "04",
+  "cat": "Writing and editing",
+  "title": "Explain it simply",
+  "role": "Students",
+  "prompt": "Explain [topic] to someone with no background, in plain English, in under [200] words. Use one everyday analogy, then one sentence saying where the analogy breaks down.",
+  "check": "Verify the key claim in a textbook or trusted source.",
+  "tip": ""
+ },
+ {
+  "id": "05",
+  "cat": "Writing and editing",
+  "title": "Make a draft sound more human",
+  "role": "Creators",
+  "prompt": "Rewrite the text below so it sounds like a person speaking: shorter sentences, concrete examples, no buzzwords. Keep every fact. Flag any sentence you could not improve without changing meaning.\n\nText:\n[paste]",
+  "check": "Read it aloud. Remove anything you would not say.",
+  "tip": ""
+ },
+ {
+  "id": "06",
+  "cat": "Research and summarising",
+  "title": "Summarise a long document",
+  "role": "Anyone",
+  "prompt": "Summarise the document below in: (1) three-sentence overview, (2) five key points, (3) what is still unclear or missing. Quote the exact sentence for each key point so I can check it.\n\nDocument:\n[paste]",
+  "check": "Spot-check at least two quotes against the source.",
+  "tip": "Quotes make errors easy to catch."
+ },
+ {
+  "id": "07",
+  "cat": "Research and summarising",
+  "title": "Compare two options",
+  "role": "Founders",
+  "prompt": "Compare [option A] and [option B] for [my situation] across: cost, effort, risk, and reversibility. Use a table. State your assumptions first and list what you would need to know to be sure.",
+  "check": "Challenge the assumptions. They are often where it goes wrong.",
+  "tip": ""
+ },
+ {
+  "id": "08",
+  "cat": "Research and summarising",
+  "title": "Build a reading list",
+  "role": "Students",
+  "prompt": "I want to learn [topic] from scratch in [4 weeks]. Propose a week-by-week plan with what to read or watch, a small exercise each week, and how I will know I understood. Mark anything you are not sure exists.",
+  "check": "Check that every named book or resource actually exists.",
+  "tip": ""
+ },
+ {
+  "id": "09",
+  "cat": "Research and summarising",
+  "title": "Pre-mortem a plan",
+  "role": "Founders",
+  "prompt": "Here is my plan: [plan]. Assume it failed in six months. List the seven most likely reasons, ordered by likelihood, and one early warning sign for each.",
+  "check": "Pick the top two and decide what you will do about them.",
+  "tip": ""
+ },
+ {
+  "id": "10",
+  "cat": "Research and summarising",
+  "title": "Extract data from messy text",
+  "role": "Operations",
+  "prompt": "From the text below, extract a table with columns: [column names]. If a value is missing, leave it blank. Do not infer. After the table, list any rows you were unsure about.\n\nText:\n[paste]",
+  "check": "Compare 5 random rows against the source.",
+  "tip": ""
+ },
+ {
+  "id": "11",
+  "cat": "Sales and outreach",
+  "title": "Account research brief",
+  "role": "Sales",
+  "prompt": "Using only the public information I paste below about [company], write a one-page brief: what they do, recent signals, likely priorities, and three questions I could ask. Mark any inference as an inference.\n\nPublic information:\n[paste]",
+  "check": "Verify each fact and its date before you mention it to the prospect.",
+  "tip": "Do not paste private data."
+ },
+ {
+  "id": "12",
+  "cat": "Sales and outreach",
+  "title": "First-touch message",
+  "role": "Sales",
+  "prompt": "Write a 90-word first message to [role] at [company]. Reference this public signal: [signal and source]. Explain the possible link to [what I sell] in one sentence. End with a low-pressure question. No flattery, no jargon.",
+  "check": "Remove any claim you cannot link to a public source.",
+  "tip": ""
+ },
+ {
+  "id": "13",
+  "cat": "Sales and outreach",
+  "title": "Follow-up that adds value",
+  "role": "Sales",
+  "prompt": "Write a follow-up to the message below. Add one genuinely useful thing (a short insight, resource or answer to a likely objection). Keep it under 70 words. Do not guilt-trip.\n\nPrevious message:\n[paste]",
+  "check": "Would you appreciate receiving this?",
+  "tip": ""
+ },
+ {
+  "id": "14",
+  "cat": "Sales and outreach",
+  "title": "Handle an objection",
+  "role": "Sales",
+  "prompt": "The prospect said: “[objection]”. Give me three honest responses: one that asks a question, one that shares evidence, one that offers a smaller next step. Do not make claims about our product I have not given you.",
+  "check": "Only use claims you can back up.",
+  "tip": ""
+ },
+ {
+  "id": "15",
+  "cat": "Sales and outreach",
+  "title": "Call prep sheet",
+  "role": "Sales",
+  "prompt": "I have a call with [name, role] about [topic] tomorrow. From this context: [context]. Give me: goal of the call, five questions, likely objections, and the single next step I want to agree.",
+  "check": "Edit the questions into your own words.",
+  "tip": ""
+ },
+ {
+  "id": "16",
+  "cat": "Marketing and content",
+  "title": "Turn a release into a post",
+  "role": "Marketing",
+  "prompt": "Turn the release note below into a LinkedIn post for [audience]. Open with the problem it solves, explain it in plain English, and end with one question. 120 to 160 words. Do not exaggerate.\n\nRelease note:\n[paste]",
+  "check": "Check every claim against the official source and link it.",
+  "tip": ""
+ },
+ {
+  "id": "17",
+  "cat": "Marketing and content",
+  "title": "Headline variations",
+  "role": "Marketing",
+  "prompt": "Write ten headline options for an article about [topic] for [audience]. Group them by approach: curiosity, benefit, how-to, contrarian. Flag any that might overpromise.",
+  "check": "Pick two to A/B test. Remove anything misleading.",
+  "tip": ""
+ },
+ {
+  "id": "18",
+  "cat": "Marketing and content",
+  "title": "Repurpose one article",
+  "role": "Creators",
+  "prompt": "Turn the article below into: a 5-point email, three social posts, and a short video script (60 seconds). Keep the same facts and tone.\n\nArticle:\n[paste]",
+  "check": "Make sure the three versions do not contradict each other.",
+  "tip": ""
+ },
+ {
+  "id": "19",
+  "cat": "Marketing and content",
+  "title": "Audience questions list",
+  "role": "Marketing",
+  "prompt": "List 20 questions a [audience] would type into a search engine about [topic], grouped by stage: just starting, comparing, ready to act. Do not invent statistics.",
+  "check": "Check which questions you can answer well from real experience.",
+  "tip": ""
+ },
+ {
+  "id": "20",
+  "cat": "Marketing and content",
+  "title": "Brand voice check",
+  "role": "Marketing",
+  "prompt": "Here is our brand voice: [3 adjectives and one example paragraph]. Review the draft below and flag every sentence that does not fit, with a suggested rewrite.\n\nDraft:\n[paste]",
+  "check": "Accept changes selectively. The voice should still sound like you.",
+  "tip": ""
+ },
+ {
+  "id": "21",
+  "cat": "Operations and support",
+  "title": "Draft a support reply",
+  "role": "Support",
+  "prompt": "Draft a reply to this customer message. Use only the approved information below. If the answer is not in it, say what we need to find out instead of guessing. Tone: calm and practical.\n\nCustomer message:\n[paste]\n\nApproved information:\n[paste]",
+  "check": "A person must review before sending. Check policy and tone.",
+  "tip": ""
+ },
+ {
+  "id": "22",
+  "cat": "Operations and support",
+  "title": "Write a clear SOP",
+  "role": "Operations",
+  "prompt": "Turn this description of how we do [task] into a standard operating procedure: purpose, who does what, numbered steps, common mistakes, and a quick checklist. Ask me questions if anything is unclear.\n\nDescription:\n[paste]",
+  "check": "Walk through it with someone who does the task.",
+  "tip": ""
+ },
+ {
+  "id": "23",
+  "cat": "Operations and support",
+  "title": "Find the repeated work",
+  "role": "Operations",
+  "prompt": "Here is a list of what my team did last week: [paste]. Group the tasks, point out what repeats, and suggest which two are the best candidates to simplify or automate and why. Note the risks.",
+  "check": "Validate with the people who actually do the work.",
+  "tip": ""
+ },
+ {
+  "id": "24",
+  "cat": "Operations and support",
+  "title": "Summarise a ticket thread",
+  "role": "Support",
+  "prompt": "Summarise this support thread in five lines: customer problem, what we tried, current status, what the customer is waiting for, and the next step with an owner.\n\nThread:\n[paste]",
+  "check": "Check for anything sensitive before sharing the summary.",
+  "tip": ""
+ },
+ {
+  "id": "25",
+  "cat": "Operations and support",
+  "title": "Weekly status update",
+  "role": "Operations",
+  "prompt": "Write a weekly update from these bullet points for [audience]: [paste]. Structure: progress, risks, decisions needed, next week. Keep it under 150 words. Do not soften real risks.",
+  "check": "Make sure risks are stated plainly.",
+  "tip": ""
+ },
+ {
+  "id": "26",
+  "cat": "Learning and study",
+  "title": "Practice quiz",
+  "role": "Students",
+  "prompt": "Create a 10-question quiz on [topic] at [level] with an answer key and a one-line explanation for each answer. Do not include trick questions. Tell me which topics are best learned from a textbook rather than from you.",
+  "check": "Check the answer key against your course notes.",
+  "tip": ""
+ },
+ {
+  "id": "27",
+  "cat": "Learning and study",
+  "title": "Study plan",
+  "role": "Students",
+  "prompt": "I have [number] days before [exam]. Topics: [list]. I can study [hours] per day. Make a day-by-day plan with review sessions and a lighter final day.",
+  "check": "Adjust it to your real energy and schedule.",
+  "tip": ""
+ },
+ {
+  "id": "28",
+  "cat": "Learning and study",
+  "title": "Teach it back",
+  "role": "Students",
+  "prompt": "I will explain [topic] in my own words. Act as a curious beginner: ask one question at a time, point out where I am vague, and do not correct me until I have finished. Then tell me what I got right and what I missed.",
+  "check": "Compare their feedback with your notes.",
+  "tip": ""
+ },
+ {
+  "id": "29",
+  "cat": "Learning and study",
+  "title": "Lesson outline",
+  "role": "Teachers",
+  "prompt": "Create a [45]-minute lesson outline on [topic] for [age/level]. Include a starter, a main activity, a check for understanding and a take-home task. List the learning objective first.",
+  "check": "Check accuracy and age-appropriateness before use.",
+  "tip": ""
+ },
+ {
+  "id": "30",
+  "cat": "Learning and study",
+  "title": "Career practice",
+  "role": "Students",
+  "prompt": "Act as an interviewer for a [role] position. Ask me one question at a time. After each answer, give two strengths and one improvement. After five questions, summarise my pattern.",
+  "check": "Treat the feedback as practice, not a prediction.",
+  "tip": ""
+ }
+]
