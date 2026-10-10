@@ -22,6 +22,66 @@
           "kind": "Interview"
         }
       ]
+    },
+    {
+      "name": "Sam Altman",
+      "handle": "sama",
+      "profile": "https://x.com/sama",
+      "role": "CEO of OpenAI",
+      "why": "Writes occasional long-form posts about OpenAI's direction. Checked 11 Oct 2026: the blog pages do not show dates, and we found no verified post from this month.",
+      "entries": [
+        {
+          "date": "",
+          "title": "The Gentle Singularity",
+          "summary": "Argues that AI progress is accelerating toward superintelligence and that safety and broad access matter.",
+          "url": "https://blog.samaltman.com/",
+          "kind": "Blog post"
+        },
+        {
+          "date": "",
+          "title": "Abundant Intelligence",
+          "summary": "Describes plans to expand AI infrastructure, including a goal of adding a gigawatt of new capacity each week.",
+          "url": "https://blog.samaltman.com/",
+          "kind": "Blog post"
+        },
+        {
+          "date": "",
+          "title": "Sora 2",
+          "summary": "Introduces the Sora app and the Sora 2 model, along with principles such as optimising for long-term user satisfaction.",
+          "url": "https://blog.samaltman.com/",
+          "kind": "Blog post"
+        }
+      ]
+    },
+    {
+      "name": "Dario Amodei",
+      "handle": "DarioAmodei",
+      "profile": "https://www.darioamodei.com/",
+      "role": "CEO of Anthropic",
+      "why": "Publishes essays and short policy posts rather than frequent social posts. Checked 11 Oct 2026: the site shows no dates, and we found no verified October 2026 post.",
+      "entries": [
+        {
+          "date": "",
+          "title": "The Adolescence of Technology",
+          "summary": "A long essay on whether society is ready for advanced AI and what risks to prepare for.",
+          "url": "https://www.darioamodei.com/",
+          "kind": "Essay"
+        },
+        {
+          "date": "",
+          "title": "Machines of Loving Grace",
+          "summary": "An essay setting out an optimistic view of what AI could do for health, science and society.",
+          "url": "https://www.darioamodei.com/",
+          "kind": "Essay"
+        },
+        {
+          "date": "",
+          "title": "The Urgency of Interpretability",
+          "summary": "A short post on why understanding how AI models work internally matters.",
+          "url": "https://www.darioamodei.com/",
+          "kind": "Short post"
+        }
+      ]
     }
   ]
 }
