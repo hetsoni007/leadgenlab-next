@@ -29,7 +29,7 @@ export default function Home() {
               {SITE.bookingUrl ? (
                 <a className="btn btn-ghost" href={SITE.bookingUrl}>Book a call</a>
               ) : (
-                <Link className="btn btn-ghost" href="/ai-updates">Read the updates</Link>
+                <Link className="btn btn-ghost" href="/learn">New to AI? Start here</Link>
               )}
             </div>
             <div className="proof">
