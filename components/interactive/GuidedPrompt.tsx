@@ -1,7 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
+import { QUESTIONS } from "@/lib/promptQuestions";
 
-type Field = { raw: string; key: string; label: string; multiline: boolean; hint: string; def: string };
+type Field = { raw: string; key: string; label: string; multiline: boolean; hint: string; def: string; example: string };
 
 /** Turn a [bracket] placeholder into a plain-English question. */
 function toField(raw: string): Field {
@@ -19,8 +20,17 @@ function toField(raw: string): Field {
   } else {
     label = `What is the ${inner}?`;
   }
+  const key = inner.toLowerCase();
+  const known = QUESTIONS[key];
+  if (known) {
+    return {
+      raw: `[${raw}]`, key, label: known.q, multiline: !!known.long,
+      hint: /paste|code|notes|draft|descriptions/i.test(known.q) ? "Only paste what you are allowed to share. Remove names, numbers and secrets." : "Short is fine. You can skip and fill it in later.",
+      def: known.def ?? "", example: known.example ?? "",
+    };
+  }
   return {
-    raw: `[${raw}]`, key: inner.toLowerCase(), label,
+    raw: `[${raw}]`, key, label, example: "",
     multiline: paste || inner.length > 48,
     hint: paste ? "Only paste text you are allowed to share. Remove names and secrets." : "Short is fine. You can skip and fill it in later.",
     def: numericDefault ? inner : "",
@@ -90,9 +100,9 @@ export function GuidedPrompt({ prompt, title, onClose }: { prompt: string; title
           <div className="field">
             <label htmlFor="gp-in">{f.label}</label>
             {f.multiline ? (
-              <textarea id="gp-in" value={values[f.key]} rows={6} onChange={(e) => set(e.target.value)} autoFocus />
+              <textarea id="gp-in" value={values[f.key]} rows={6} placeholder={f.example ? `For example: ${f.example}` : undefined} onChange={(e) => set(e.target.value)} autoFocus />
             ) : (
-              <input id="gp-in" value={values[f.key]} onChange={(e) => set(e.target.value)} autoFocus
+              <input id="gp-in" value={values[f.key]} placeholder={f.example ? `For example: ${f.example}` : undefined} onChange={(e) => set(e.target.value)} autoFocus
                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); setI((x) => x + 1); } }} />
             )}
             <small className="muted">{f.hint}</small>
