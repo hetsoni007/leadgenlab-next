@@ -19,6 +19,7 @@ export function Footer() {
         <div>
           <h2>Work with us</h2>
           <Link href="/contact">Request an AI workflow audit</Link>
+          <Link href="/quiz">AI readiness quiz</Link>
           <Link href="/services">Services</Link>
           <Link href="/about">About</Link>
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

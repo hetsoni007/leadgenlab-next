@@ -1,11 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const EMAIL = "het.soni@soniconsultancyservices.com";
 
 export function ContactForm({ endpoint }: { endpoint: string }) {
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
+  const msgRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const m = new URLSearchParams(window.location.search).get("message");
+    if (m && msgRef.current) msgRef.current.value = m;
+  }, []);
 
   function mailto(data: Record<string, string>) {
     const body = Object.entries(data)
@@ -67,7 +73,7 @@ export function ContactForm({ endpoint }: { endpoint: string }) {
         </div>
       </div>
       <div className="field"><label htmlFor="team">Team and tools (optional)</label><input id="team" name="team" placeholder="e.g. 8-person sales team, HubSpot, Gmail" /></div>
-      <div className="field"><label htmlFor="message">What would you like to improve?</label><textarea id="message" name="message" placeholder="One repeated task or bottleneck is plenty." /></div>
+      <div className="field"><label htmlFor="message">What would you like to improve?</label><textarea ref={msgRef} id="message" name="message" placeholder="One repeated task or bottleneck is plenty." /></div>
       <input className="hp" type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" />
       <div><button className="btn" type="submit" disabled={busy}>{busy ? "Sending…" : "Send enquiry"}</button></div>
       <p className="status" role="status">{status}</p>

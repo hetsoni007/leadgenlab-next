@@ -4,6 +4,7 @@ const NAV = [
   { href: "/ai-updates", label: "Updates" },
   { href: "/guides", label: "Guides" },
   { href: "/workflows", label: "Workflows" },
+  { href: "/quiz", label: "AI readiness" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
 ];

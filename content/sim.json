@@ -1,0 +1,866 @@
+{
+ "learningPaths": {
+  "general": {
+   "label": "GENERAL READER",
+   "example": "Choose one update you have seen recently.",
+   "simple": "Start with the latest update at the top of this page. Open its source and mark one detail you want to understand.",
+   "tasks": [
+    [
+     "Notice",
+     "What changed?",
+     "Read the plain-English summary. Find the exact feature, model, or access change."
+    ],
+    [
+     "Relate",
+     "Why could it matter?",
+     "Connect the update to a question, task, or decision in your own life."
+    ],
+    [
+     "Try",
+     "One safe task",
+     "Try one low-risk example. Do not share private details you would not want stored."
+    ],
+    [
+     "Reflect",
+     "What did you learn?",
+     "Check the result against a trusted source. Decide whether to use it again."
+    ]
+   ],
+   "technical": "Start at the latest entry. Separate a capability announcement from an availability change, then inspect the source and limits."
+  },
+  "sales": {
+   "label": "SALES / BUSINESS DEVELOPMENT",
+   "example": "Use AI to prepare a relevant first touch.",
+   "simple": "Pick one public company update. Ask AI for a short account-relevant angle, then verify every fact before sending anything.",
+   "tasks": [
+    [
+     "Spot",
+     "Find the signal",
+     "Choose a buyer, account, or industry signal from a cited source."
+    ],
+    [
+     "Shape",
+     "Draft a relevant angle",
+     "Ask for a concise opener tied to the prospect’s stated priorities."
+    ],
+    [
+     "Verify",
+     "Check every claim",
+     "Confirm names, facts, permissions, and personalization before sending."
+    ],
+    [
+     "Learn",
+     "Measure response",
+     "Track reply quality and meetings, not just message volume."
+    ]
+   ],
+   "technical": "Prototype a sourced account-research and drafting workflow. Gate outbound actions on human review and log source quality, edit rate, reply rate, and meeting conversion."
+  },
+  "marketing": {
+   "label": "MARKETING / GROWTH",
+   "example": "Turn one release into a small audience test.",
+   "simple": "Choose one new feature your audience may care about. Make two clear explainers and see which one helps readers take the next step.",
+   "tasks": [
+    [
+     "Audience",
+     "Name the reader",
+     "Choose one segment and one real question they are trying to answer."
+    ],
+    [
+     "Explain",
+     "Make two clear angles",
+     "Create a beginner version and a practical use-case version."
+    ],
+    [
+     "Review",
+     "Protect trust",
+     "Check claims, source links, brand voice, privacy, and accessibility."
+    ],
+    [
+     "Measure",
+     "Learn from behavior",
+     "Compare useful engagement such as saves, completions, and qualified enquiries."
+    ]
+   ],
+   "technical": "Build a small content experiment with defined segments, attribution, holdout or baseline, accessible variants, and consent-aware analytics. Optimize qualified outcomes, not vanity clicks."
+  },
+  "founder": {
+   "label": "FOUNDER / BUSINESS OWNER",
+   "example": "Find a repeatable task before buying another tool.",
+   "simple": "Start with one task that regularly takes your team too long. See whether the AI update helps, then compare the time and quality.",
+   "tasks": [
+    [
+     "Choose",
+     "Find repeated work",
+     "Name one time-consuming workflow and how often it happens."
+    ],
+    [
+     "Test",
+     "Keep the pilot small",
+     "Use sample or low-risk data and set a clear success measure."
+    ],
+    [
+     "Check",
+     "Include the real costs",
+     "Count review time, errors, subscription, and data risk as well as speed."
+    ],
+    [
+     "Decide",
+     "Scale only what works",
+     "Keep the change, refine it, or stop. Tell the team what you learned."
+    ]
+   ],
+   "technical": "Frame a narrow pilot with baseline throughput, human review effort, failure thresholds, data classification, model and API costs, and a rollback path."
+  },
+  "developer": {
+   "label": "DEVELOPER / IT",
+   "example": "Turn the release note into a reproducible evaluation.",
+   "simple": "Try the feature with a small example, then check whether it gives a result you can trust and repeat.",
+   "tasks": [
+    [
+     "Inspect",
+     "Read the primary source",
+     "Check model/API availability, version notes, input limits, and known constraints."
+    ],
+    [
+     "Prototype",
+     "Build one narrow flow",
+     "Use test data, scoped credentials, and an observable baseline."
+    ],
+    [
+     "Evaluate",
+     "Compare the trade-offs",
+     "Measure task success, latency, cost, robustness, and human corrections."
+    ],
+    [
+     "Ship",
+     "Deploy with safeguards",
+     "Add monitoring, human escalation, rate controls, and a rollback option."
+    ]
+   ],
+   "technical": "Pin model/version, normalize prompts and fixtures, run representative evaluations, inspect tool permissions, and report quality, latency, cost, and regression deltas before rollout."
+  },
+  "operations": {
+   "label": "OPERATIONS / CUSTOMER SUPPORT",
+   "example": "Reduce one handoff while keeping a human check.",
+   "simple": "Look for one repeated question or handoff. Let AI prepare a draft, then have a person check it before it reaches a customer.",
+   "tasks": [
+    [
+     "Map",
+     "Find the friction",
+     "Draw the current steps and note where delays, rework, or repeated questions occur."
+    ],
+    [
+     "Assist",
+     "Try a low-risk draft",
+     "Let AI summarize or prepare a response while a person still approves it."
+    ],
+    [
+     "Protect",
+     "Check access and errors",
+     "Use only approved information. Record mistakes and escalation needs."
+    ],
+    [
+     "Improve",
+     "Keep the process clear",
+     "Document the new steps and review whether time or resolution quality changed."
+    ]
+   ],
+   "technical": "Map system boundaries and role access; introduce draft-only automation first, confidence thresholds, exception queues, traceable sources, and service-level/error monitoring."
+  },
+  "educator": {
+   "label": "EDUCATOR / TRAINER",
+   "example": "Turn a feature into a short, checkable lesson.",
+   "simple": "Ask for a simple demonstration, then compare it with a trusted source and explain the idea in your own words.",
+   "tasks": [
+    [
+     "Frame",
+     "Set a learning goal",
+     "Decide what learners should understand or be able to do."
+    ],
+    [
+     "Demonstrate",
+     "Show one example",
+     "Use a relevant prompt or visual and make the AI’s role clear."
+    ],
+    [
+     "Verify",
+     "Check accuracy and access",
+     "Review facts, bias, age suitability, accessibility, and privacy."
+    ],
+    [
+     "Reflect",
+     "Ask learners to teach back",
+     "Invite learners to explain what worked and where human judgment mattered."
+    ]
+   ],
+   "technical": "Design an outcome-aligned lesson with reproducible prompts, source checks, accessible visuals, privacy boundaries, and an assessment that distinguishes recall from understanding."
+  },
+  "student": {
+   "label": "STUDENT / CAREER STARTER",
+   "example": "Use AI to learn a concept, not skip the learning.",
+   "simple": "Ask AI to explain a topic, try a practice question, then check your answer using your course notes or another trusted source.",
+   "tasks": [
+    [
+     "Ask",
+     "Name what is unclear",
+     "Turn one confusing idea into a specific question."
+    ],
+    [
+     "Practice",
+     "Try it yourself",
+     "Ask for a hint or a worked example, then solve a similar question on your own."
+    ],
+    [
+     "Check",
+     "Compare sources",
+     "Review the answer against course materials and note anything uncertain."
+    ],
+    [
+     "Explain",
+     "Teach it back",
+     "Summarize the idea without the tool. Keep track of what you still need to learn."
+    ]
+   ],
+   "technical": "Use the assistant for scaffolding and practice generation; independently solve a parallel task, verify citations, and disclose AI use where your course requires it."
+  }
+ },
+ "flowSteps": {
+  "finance": [
+   [
+    "Question",
+    "Use a general, non-sensitive prompt"
+   ],
+   [
+    "Source",
+    "Check the connected source and date"
+   ],
+   [
+    "Review",
+    "Look for gaps or misclassified items"
+   ],
+   [
+    "Decide",
+    "Verify before any real financial choice"
+   ]
+  ],
+  "academy": [
+   [
+    "Use case",
+    "Choose one measurable workflow"
+   ],
+   [
+    "Readiness",
+    "Check data, access, and owners"
+   ],
+   [
+    "Pilot",
+    "Test with a bounded group"
+   ],
+   [
+    "Handover",
+    "Measure outcomes and support needs"
+   ]
+  ],
+  "sol": [
+   [
+    "Task",
+    "Pick a representative, low-risk input"
+   ],
+   [
+    "Baseline",
+    "Record output quality and effort"
+   ],
+   [
+    "Compare",
+    "Repeat with the candidate model"
+   ],
+   [
+    "Choose",
+    "Include price, latency, and review time"
+   ]
+  ],
+  "cloud": [
+   [
+    "Scope",
+    "Describe a bounded coding task"
+   ],
+   [
+    "Prepare",
+    "Check repository and dependencies"
+   ],
+   [
+    "Run",
+    "Review isolated task output"
+   ],
+   [
+    "Approve",
+    "Inspect changes before merge"
+   ]
+  ],
+  "pages": [
+   [
+    "Draft",
+    "Start from material you can share"
+   ],
+   [
+    "Collaborate",
+    "Invite the right reviewers"
+   ],
+   [
+    "Check",
+    "Preview links and details"
+   ],
+   [
+    "Publish",
+    "Review changes before sharing"
+   ]
+  ],
+  "meetings": [
+   [
+    "Capture",
+    "Confirm notice and policy"
+   ],
+   [
+    "Summarize",
+    "Check key decisions"
+   ],
+   [
+    "Assign",
+    "Name owners and due dates"
+   ],
+   [
+    "Confirm",
+    "Review before sharing"
+   ]
+  ],
+  "review": [
+   [
+    "Scope",
+    "Choose a change and repository"
+   ],
+   [
+    "Scan",
+    "Inspect findings and evidence"
+   ],
+   [
+    "Triage",
+    "Confirm impact and false positives"
+   ],
+   [
+    "Review",
+    "Check any fix before merging"
+   ]
+  ],
+  "automation": [
+   [
+    "Watch",
+    "Use a connected app you can access"
+   ],
+   [
+    "Match",
+    "Write a specific trigger"
+   ],
+   [
+    "Prepare",
+    "Create a draft, not an action"
+   ],
+   [
+    "Review",
+    "Check sources before sharing"
+   ]
+  ],
+  "dots": [
+   [
+    "Goal",
+    "Write a specific, limited task"
+   ],
+   [
+    "Access",
+    "Choose minimum necessary apps"
+   ],
+   [
+    "Draft",
+    "Keep external actions paused"
+   ],
+   [
+    "Review",
+    "Check sources before approval"
+   ]
+  ],
+  "lead": [
+   [
+    "Signal",
+    "Start with a public, sourced update"
+   ],
+   [
+    "Fit",
+    "Connect it to the account’s stated priorities"
+   ],
+   [
+    "Draft",
+    "Prepare a concise, specific opener"
+   ],
+   [
+    "Review",
+    "Check facts, relevance, and permission"
+   ]
+  ],
+  "release": [
+   [
+    "Source",
+    "Read the official release"
+   ],
+   [
+    "Explain",
+    "Translate the change"
+   ],
+   [
+    "Try",
+    "Use a safe sample task"
+   ],
+   [
+    "Decide",
+    "Keep, retest, or skip"
+   ]
+  ],
+  "growth": [
+   [
+    "Baseline",
+    "Map the current journey"
+   ],
+   [
+    "Listen",
+    "Find the point of friction"
+   ],
+   [
+    "Test",
+    "Change one step"
+   ],
+   [
+    "Learn",
+    "Compare qualified outcomes"
+   ]
+  ],
+  "support": [
+   [
+    "Request",
+    "Understand the incoming need"
+   ],
+   [
+    "Context",
+    "Use only approved information"
+   ],
+   [
+    "Draft",
+    "Prepare a suggested response"
+   ],
+   [
+    "Human check",
+    "Review before sending or changing data"
+   ]
+  ],
+  "compare": [
+   [
+    "Same task",
+    "Use identical input and instructions"
+   ],
+   [
+    "Baseline",
+    "Record the existing result"
+   ],
+   [
+    "Variant",
+    "Run the comparison fairly"
+   ],
+   [
+    "Decide",
+    "Quality, time, privacy, cost"
+   ]
+  ],
+  "policy": [
+   [
+    "Task",
+    "Describe the planned use plainly"
+   ],
+   [
+    "Risk",
+    "Check deception and harm"
+   ],
+   [
+    "Review",
+    "Name an authorized human reviewer"
+   ],
+   [
+    "Record",
+    "Document the safeguards"
+   ]
+  ],
+  "integrity": [
+   [
+    "Source",
+    "Trace the original source"
+   ],
+   [
+    "Identity",
+    "Verify who is responsible"
+   ],
+   [
+    "Corroborate",
+    "Check independent evidence"
+   ],
+   [
+    "Review",
+    "Pause and document concerns"
+   ]
+  ],
+  "intelligentui": [
+   [
+    "Ask",
+    "Name a learning goal"
+   ],
+   [
+    "Explore",
+    "Use the visual controls"
+   ],
+   [
+    "Verify",
+    "Check key facts"
+   ],
+   [
+    "Apply",
+    "Try one bounded task"
+   ]
+  ],
+  "haiku": [
+   [
+    "Task",
+    "Choose repeatable, narrow work"
+   ],
+   [
+    "Baseline",
+    "Record current quality and cost"
+   ],
+   [
+    "Compare",
+    "Run a representative sample"
+   ],
+   [
+    "Route",
+    "Choose model by task"
+   ]
+  ],
+  "teens": [
+   [
+    "Capture",
+    "Use permitted study notes"
+   ],
+   [
+    "Create",
+    "Make cards or a quiz"
+   ],
+   [
+    "Practice",
+    "Retry missed concepts"
+   ],
+   [
+    "Verify",
+    "Check against course material"
+   ]
+  ],
+  "cyber": [
+   [
+    "Scope",
+    "Name owned or authorized systems"
+   ],
+   [
+    "Tier",
+    "Choose access for the work"
+   ],
+   [
+    "Verify",
+    "Confirm required controls"
+   ],
+   [
+    "Test",
+    "Stay within written scope"
+   ]
+  ],
+  "ads": [
+   [
+    "Goal",
+    "Choose a qualified outcome"
+   ],
+   [
+    "Creative",
+    "Show the offer clearly"
+   ],
+   [
+    "Measure",
+    "Connect conversion events"
+   ],
+   [
+    "Compare",
+    "Test incremental CAC"
+   ]
+  ],
+  "watermark": [
+   [
+    "Scope",
+    "Check model, product, and region"
+   ],
+   [
+    "Opt in",
+    "Enable only where needed"
+   ],
+   [
+    "Disclose",
+    "Explain AI assistance"
+   ],
+   [
+    "Interpret",
+    "Use as one limited signal"
+   ]
+  ],
+  "socialsignal": [
+   [
+    "Claim",
+    "Identify what the post says"
+   ],
+   [
+    "Verify",
+    "Check official OpenAI sources"
+   ],
+   [
+    "Explain",
+    "State rollout and access limits"
+   ],
+   [
+    "Label",
+    "Mark confirmed or early signal"
+   ]
+  ]
+ },
+ "roleLabels": {
+  "sales": "Sales / business development",
+  "marketing": "Marketing / growth",
+  "founder": "Founder / business owner",
+  "developer": "Developer / IT",
+  "operations": "Operations / support",
+  "educator": "Educator / trainer",
+  "student": "Student / career starter",
+  "general": "General reader"
+ },
+ "pageSims": {
+  "/about/editorial-standards": {
+   "kind": "release",
+   "task": "Explain a new AI feature to a mixed-experience team",
+   "title": "How a story becomes a clear explainer"
+  },
+  "/about": {
+   "kind": "release",
+   "task": "Help a teammate understand one new feature",
+   "title": "How LeadGenLab turns a release into learning"
+  },
+  "/ai-updates/chatgpt-ads-visual-measurement-2026-10-05": {
+   "kind": "ads",
+   "task": "Compare a fictional campaign’s qualified leads and incremental CAC against its usual channel",
+   "title": "Walk through a fair ad measurement plan"
+  },
+  "/ai-updates/chatgpt-app-event-automations-2026-09-29": {
+   "kind": "automation",
+   "task": "Prepare a summary when a public launch channel posts an update",
+   "title": "Design a review-first app-triggered automation"
+  },
+  "/ai-updates/chatgpt-dots-2026-09-29": {
+   "kind": "dots",
+   "task": "Prepare weekly public prospect research; do not send messages",
+   "title": "Simulate a safely bounded dot task"
+  },
+  "/ai-updates/chatgpt-meetings-2026-09-29": {
+   "kind": "meetings",
+   "task": "Convert a mock project check-in into three action items",
+   "title": "Turn a sample meeting into checked actions"
+  },
+  "/ai-updates/chatgpt-pages-sites-2026-09-29": {
+   "kind": "pages",
+   "task": "Create a public beginner guide from approved source notes",
+   "title": "Plan a safe collaborative publishing flow"
+  },
+  "/ai-updates/chatgpt-teens-study-tools-2026-10-07": {
+   "kind": "teens",
+   "task": "Create a short quiz from a fictional biology lesson about plant cells",
+   "title": "Walk through a safe study practice loop"
+  },
+  "/ai-updates/claude-cyber-verification-2026-10-06": {
+   "kind": "cyber",
+   "task": "Review a public sample report for a vulnerability in a system your team owns",
+   "title": "Walk through an authorized security scope"
+  },
+  "/ai-updates/claude-frontier-academy-2026-10-02": {
+   "kind": "academy",
+   "task": "Plan a small internal knowledge assistant pilot",
+   "title": "Map a responsible enterprise pilot"
+  },
+  "/ai-updates/claude-haiku-5-5-2026-10-07": {
+   "kind": "haiku",
+   "task": "Summarize a public product note and classify its three main changes",
+   "title": "Walk through a model-and-cost comparison"
+  },
+  "/ai-updates/claude-usage-policy-2026-10-08": {
+   "kind": "policy",
+   "task": "Review a fictional campaign draft for fake identities or undisclosed automation",
+   "title": "Walk through a responsible-use review"
+  },
+  "/ai-updates/codex-cloud-2026-09-29": {
+   "kind": "cloud",
+   "task": "Ask Codex to fix one small issue in a sample project",
+   "title": "Walk through a controlled cloud coding task"
+  },
+  "/ai-updates/codex-review-security-cloud-2026-09-29": {
+   "kind": "review",
+   "task": "Review a mock dependency update in a sample repository",
+   "title": "Walk through a human-reviewed code scan"
+  },
+  "/ai-updates/finances-in-chatgpt-2026-10-02": {
+   "kind": "finance",
+   "task": "Using synthetic sample data, list recurring costs to review",
+   "title": "Walk through a sample finance question"
+  },
+  "/ai-updates/gpt-6-1-sol-2026-09-29": {
+   "kind": "sol",
+   "task": "Compare summaries of one public product brief",
+   "title": "Run a fair model-selection walkthrough"
+  },
+  "/ai-updates/gpt-6-intelligent-ui-2026-10-07": {
+   "kind": "intelligentui",
+   "task": "Explain a fictional four-step customer onboarding journey with a tappable diagram",
+   "title": "Walk through a visual-learning task"
+  },
+  "/ai-updates": {
+   "kind": "socialsignal",
+   "task": "A product lead posts that a new feature is rolling out",
+   "title": "Turn a social post into a verified reader update"
+  },
+  "/ai-updates/openai-false-front-operations-2026-10-08": {
+   "kind": "integrity",
+   "task": "Check a fictional industry report before citing it in a newsletter",
+   "title": "Walk through a source-authenticity check"
+  },
+  "/ai-updates/openai-text-watermarking-2026-10-05": {
+   "kind": "watermark",
+   "task": "Review a fictional AI-assisted newsletter draft before publishing it",
+   "title": "Walk through a content provenance check"
+  },
+  "/contact": {
+   "kind": "support",
+   "task": "Plan a short conversation about an AI workflow",
+   "title": "What happens after you share a question"
+  },
+  "/guides": {
+   "kind": "release",
+   "task": "Learn how to use an AI assistant for a repeat task",
+   "title": "Choose a useful starting path"
+  },
+  "/": {
+   "kind": "lead",
+   "task": "A company announces a new product line",
+   "title": "Turn a public signal into a relevant first touch"
+  },
+  "/insights/ai-agents-explained": {
+   "kind": "support",
+   "task": "Summarize three open support requests",
+   "title": "Try a careful agent workflow"
+  },
+  "/insights/ai-chips-explained": {
+   "kind": "compare",
+   "task": "Explain why a model needs computing hardware",
+   "title": "Walk through a model request"
+  },
+  "/insights/choosing-ai-assistant": {
+   "kind": "compare",
+   "task": "Draft a 100-word meeting follow-up",
+   "title": "Compare assistants fairly"
+  },
+  "/insights/helpful-apps": {
+   "kind": "growth",
+   "task": "Help a reader find one useful guide",
+   "title": "Spot friction in an app journey"
+  },
+  "/insights": {
+   "kind": "growth",
+   "task": "Choose one article topic and test it in your work",
+   "title": "Turn an idea into something you can try"
+  },
+  "/insights/privacy-checkup": {
+   "kind": "support",
+   "task": "Review which apps can access a shared file",
+   "title": "Walk through a privacy check"
+  },
+  "/insights/tech-ecosystems": {
+   "kind": "support",
+   "task": "Move a note from a phone to a work laptop",
+   "title": "Map a connected account workflow"
+  },
+  "/newsletter": {
+   "kind": "growth",
+   "task": "Improve one useful action from a newsletter article",
+   "title": "From reader question to Lead Gen Lab test"
+  },
+  "/roadmaps": {
+   "kind": "release",
+   "task": "Understand a new AI feature for your role",
+   "title": "A learning roadmap with visible progress"
+  },
+  "/services": {
+   "kind": "support",
+   "task": "Explore where an AI workflow might help a team",
+   "title": "From business question to a practical plan"
+  },
+  "/tools/choosing-ai-assistant": {
+   "kind": "compare",
+   "task": "Summarize a public research report",
+   "title": "Find a tool for this job"
+  },
+  "/tools": {
+   "kind": "compare",
+   "task": "Summarize a public research report",
+   "title": "Choose a tool by testing the real task"
+  },
+  "/weekly-reset/chatgpt-2026-10-03": {
+   "kind": "finance",
+   "task": "Using synthetic sample data, list recurring costs to review",
+   "title": "Walk through a sample finance question"
+  },
+  "/weekly-reset/claude-2026-10-03": {
+   "kind": "compare",
+   "task": "Rewrite a public product announcement for two audiences",
+   "title": "Compare Claude versions on the same task"
+  },
+  "/weekly-reset": {
+   "kind": "release",
+   "task": "Pick one change to explain and try with your team",
+   "title": "Turn this week’s update into a short learning loop"
+  },
+  "/workflows/engagement-to-cac": {
+   "kind": "growth",
+   "task": "Readers open an AI guide but rarely try the example",
+   "title": "Run the example with your own task"
+  },
+  "/workflows": {
+   "kind": "lead",
+   "task": "A company announces a new product line",
+   "title": "Make the example yours"
+  },
+  "/workflows/lead-research-loop": {
+   "kind": "lead",
+   "task": "A target company announces a new product line",
+   "title": "Run the example with your own task"
+  },
+  "/workflows/release-to-learning": {
+   "kind": "release",
+   "task": "A new model promises faster document analysis",
+   "title": "Run the example with your own task"
+  }
+ }
+}
