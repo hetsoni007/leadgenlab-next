@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DailyFeed } from "@/components/DailyFeed";
-import { childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
+import { FlowDiagram, HeroArt, Icon, StatStrip } from "@/components/art";
+import { allPages, childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
 
 function short(d: string, n: number) {
   if (d.length <= n) return d;
@@ -13,9 +14,16 @@ export default function Home() {
   const [top, ...rest] = updates;
   const compact = rest.slice(0, 4);
   const grid = updates.slice(0, 5);
+  const stats = [
+    { value: updates.length, label: "release explainers" },
+    { value: allPages.filter((p) => p.path.startsWith("/guides/")).length, label: "beginner guides" },
+    { value: allPages.filter((p) => p.path.startsWith("/workflows/")).length, label: "workflow samples" },
+    { value: 20, label: "answered newcomer questions" },
+  ];
   return (
     <>
       <section className="hero">
+        <HeroArt />
         <div className="wrap hero-grid">
           <div>
             <p className="eyebrow">AI workflow consulting · Claude + ChatGPT</p>
@@ -61,7 +69,11 @@ export default function Home() {
         </div>
       </section>
 
+      <StatStrip stats={stats} />
+
       <DailyFeed />
+
+      <FlowDiagram />
 
       <section className="section">
         <div className="wrap">
@@ -90,10 +102,10 @@ export default function Home() {
           <p className="eyebrow">How an engagement works</p>
           <h2 style={{ marginBottom: 26 }}>From audit to a workflow your team uses</h2>
           <ol className="steps">
-            <li><h3>Audit</h3><p>We map where your team loses time and which tasks suit Claude or ChatGPT.</p></li>
-            <li><h3>Design</h3><p>One workflow at a time, with a human check where it matters.</p></li>
-            <li><h3>Pilot</h3><p>Run it on real work for two weeks and measure time saved and quality.</p></li>
-            <li><h3>Hand over</h3><p>Playbooks and prompts your team owns, plus a plan for what&apos;s next.</p></li>
+            <li><Icon name="audit" /><h3>Audit</h3><p>We map where your team loses time and which tasks suit Claude or ChatGPT.</p></li>
+            <li><Icon name="design" /><h3>Design</h3><p>One workflow at a time, with a human check where it matters.</p></li>
+            <li><Icon name="pilot" /><h3>Pilot</h3><p>Run it on real work for two weeks and measure time saved and quality.</p></li>
+            <li><Icon name="handover" /><h3>Hand over</h3><p>Playbooks and prompts your team owns, plus a plan for what&apos;s next.</p></li>
           </ol>
         </div>
       </section>
