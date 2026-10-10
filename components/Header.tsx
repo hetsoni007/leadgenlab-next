@@ -16,7 +16,7 @@ export function Header() {
     <header className="site-header">
       <div className="wrap header-inner">
         <Link href="/" className="brand" aria-label="LeadGenLab home">
-          <span className="brand-mark" aria-hidden="true">LG</span>
+          <img className="brand-logo" src="/brand/logo-mark.svg" width={36} height={36} alt="" />
           <span>LeadGen<em>Lab</em></span>
         </Link>
         <nav aria-label="Main">
