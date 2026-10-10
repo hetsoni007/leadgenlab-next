@@ -11,7 +11,7 @@ export default function Home() {
   const updates = childrenOf("ai-updates");
   const [top, ...rest] = updates;
   const compact = rest.slice(0, 4);
-  const grid = updates.slice(0, 6);
+  const grid = updates.slice(0, 5);
   return (
     <>
       <section className="hero">
