@@ -12,7 +12,7 @@ export type Page = {
 
 export const SITE = {
   name: "LeadGenLab",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://leadgenlab.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://leadgenlab-next.vercel.app",
   email: "het.soni@soniconsultancyservices.com",
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? "",
   formEndpoint: process.env.NEXT_PUBLIC_FORM_ENDPOINT ?? "",

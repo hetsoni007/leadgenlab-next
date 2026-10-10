@@ -1,7 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { DailyFeed } from "@/components/DailyFeed";
 import { FlowDiagram, HeroArt, Icon, StatStrip } from "@/components/art";
 import { allPages, childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 function short(d: string, n: number) {
   if (d.length <= n) return d;

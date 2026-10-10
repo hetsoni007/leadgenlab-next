@@ -36,7 +36,14 @@ for f in sorted(SRC.rglob("*.html")):
         hero = h1.find_parent("section") or h1.parent
         intro_el = hero.find("p")
         intro = intro_el.get_text(" ", strip=True) if intro_el else ""
-        hero.decompose()
+        words = len(hero.get_text(" ", strip=True).split())
+        if words > 160:
+            # Article body shares a wrapper with the heading: drop only the heading block.
+            if intro_el is not None:
+                intro_el.decompose()
+            h1.decompose()
+        else:
+            hero.decompose()
     else:
         intro = ""
     md = soup.find("meta", attrs={"name": "description"})

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ToolMatcher } from "@/components/interactive/ToolMatcher";
 import { PromptLab } from "@/components/interactive/PromptLab";
 import { SpotTheError } from "@/components/interactive/SpotTheError";
+import { JsonLd } from "@/components/JsonLd";
+import { FAQS } from "@/lib/faq";
 import { FaqBrowser } from "@/components/interactive/FaqBrowser";
 
 export const metadata: Metadata = {
@@ -14,6 +16,13 @@ export const metadata: Metadata = {
 export default function Learn() {
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Start here</p>

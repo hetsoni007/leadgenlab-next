@@ -8,6 +8,8 @@ import { AssistantFinder } from "@/components/interactive/AssistantFinder";
 import { Estimator } from "@/components/interactive/Estimator";
 import { UpdateBrowser, type Item } from "@/components/interactive/UpdateBrowser";
 import { simFor } from "@/lib/sim";
+import { JsonLd } from "@/components/JsonLd";
+import { abs, shortDesc, shortTitle } from "@/lib/seo";
 import { Toc } from "@/components/Toc";
 import { TextSize } from "@/components/TextSize";
 import { headingsOf, readingMinutes } from "@/lib/toc";
@@ -25,10 +27,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const page = getPage("/" + slug.join("/"));
   if (!page) return {};
+  const title = shortTitle(page.title);
+  const description = shortDesc(page.description || page.intro || page.title);
+  const date = dateOf(page);
   return {
-    title: page.title,
-    description: page.description || page.intro,
+    title,
+    description,
     alternates: { canonical: page.path },
+    openGraph: {
+      title, description, url: page.path, siteName: "LeadGenLab",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+      type: date ? "article" : "website",
+      ...(date ? { publishedTime: date } : {}),
+    },
+    twitter: { card: "summary_large_image", title, description, images: ["/opengraph-image"] },
   };
 }
 
@@ -61,8 +73,33 @@ export default async function ContentPage({ params }: Props) {
   const minutes = showBody ? readingMinutes(body) : 0;
   const longRead = showBody && minutes >= 2;
 
+  const related = !isSectionIndex
+    ? childrenOf(section).filter((c) => c.path !== path).slice(0, 3)
+    : [];
+  const crumbs = [
+    { "@type": "ListItem", position: 1, name: "Home", item: abs("/") },
+    ...(!isSectionIndex
+      ? [{ "@type": "ListItem", position: 2, name: SECTION_LABEL[section] ?? section, item: abs(`/${section}`) }]
+      : []),
+    { "@type": "ListItem", position: isSectionIndex ? 2 : 3, name: page.title, item: abs(path) },
+  ];
+
   return (
     <>
+      <JsonLd
+        data={[
+          { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: crumbs },
+          ...(date
+            ? [{
+                "@context": "https://schema.org", "@type": "Article", headline: page.title.slice(0, 110),
+                description: page.description, datePublished: date, dateModified: date,
+                mainEntityOfPage: abs(path),
+                author: { "@type": "Organization", name: "LeadGenLab" },
+                publisher: { "@type": "Organization", name: "LeadGenLab", url: abs("/") },
+              }]
+            : []),
+        ]}
+      />
       <section className="page-hero">
         <div className="wrap">
           <nav className="crumbs" aria-label="Breadcrumb">
@@ -119,6 +156,26 @@ export default async function ContentPage({ params }: Props) {
       {path === "/workflows" && <div className="wrap sim-stack"><WorkflowSim kind="lead" task="A company announces a new product line" title="Lead research to relevant outreach" /></div>}
       {path === "/services" && <div className="wrap sim-stack"><Estimator /></div>}
       {(path === "/tools" || path === "/tools/choosing-ai-assistant") && <div className="wrap sim-stack"><AssistantFinder /></div>}
+
+      {related.length > 0 && (
+        <div className="wrap">
+          <section className="related" aria-labelledby="rel-h">
+            <h2 id="rel-h" style={{ fontSize: 26, marginBottom: 16 }}>Keep reading</h2>
+            <div className="cards">
+              {related.map((c) => (
+                <Link key={c.path} href={c.path} className="card">
+                  {dateOf(c) && <time dateTime={dateOf(c)!}>{formatDate(dateOf(c)!)}</time>}
+                  <h3>{c.title}</h3>
+                </Link>
+              ))}
+              <Link href="/learn" className="card">
+                <span className="tag">New to this?</span>
+                <h3>Start with the basics: pick a tool and practise</h3>
+              </Link>
+            </div>
+          </section>
+        </div>
+      )}
 
       <div className="wrap">
         <section className="cta-band">
