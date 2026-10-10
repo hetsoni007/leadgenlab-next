@@ -1,0 +1,210 @@
+[
+ {
+  "slug": "icp-and-account-research",
+  "n": 1,
+  "name": "ICP and account research",
+  "goal": "Decide who is worth contacting and prepare a short, sourced brief for each account before any message is written.",
+  "when": "Before every campaign, and whenever replies suggest you are targeting the wrong people.",
+  "inputs": [
+   "5 to 10 of your best past customers (anonymised is fine)",
+   "3 to 5 customers that churned or never bought",
+   "Your offer in two sentences"
+  ],
+  "steps": [
+   {
+    "tool": "Claude",
+    "do": "Paste the customer descriptions and run the ICP prompt. Review the criteria, disqualifiers and signals it proposes."
+   },
+   {
+    "tool": "You",
+    "do": "Edit the ICP to match what you actually know. Remove any criterion you cannot check from public information."
+   },
+   {
+    "tool": "LinkedIn / Sales Navigator",
+    "do": "Turn the criteria into a saved search (industry, company size, role, geography). Save 25 accounts."
+   },
+   {
+    "tool": "Apollo",
+    "do": "Cross-check the same filters in Apollo and compare the lists. Export only the fields you need."
+   },
+   {
+    "tool": "Claude",
+    "do": "For each account, paste only public information you collected and run the account-brief prompt."
+   },
+   {
+    "tool": "CRM / sheet",
+    "do": "Record account, source URL, signal, date checked and your fit score (1 to 5)."
+   }
+  ],
+  "prompt": "You are helping me define an ideal customer profile (ICP) for B2B outreach.\n\nMy offer: [two sentences]\n\nBest customers (anonymised):\n[paste 5-10 descriptions: industry, size, role of buyer, why they bought]\n\nCustomers that churned or never bought:\n[paste 3-5 descriptions]\n\nTasks:\n1. Propose an ICP: firmographics, buyer roles, trigger events, and 3 qualifying questions.\n2. List disqualifiers.\n3. List signals I can check from PUBLIC information only (name each place to check).\n4. Flag any criterion that is only a guess from this small sample.\nDo not invent facts about any company.",
+  "review": "You approve the final ICP and score every account yourself. Claude does not decide who gets contacted.",
+  "stop": [
+   "Fewer than half of your sample accounts fit the ICP when you check by hand",
+   "You cannot find a public source for a signal: drop that signal"
+  ],
+  "metrics": [
+   "Minutes of research per account",
+   "% of accounts you rate 4 or 5 on fit",
+   "% of briefs with a factual error found on review"
+  ],
+  "risks": [
+   "A small sample producing a misleading ICP",
+   "Using data you were not entitled to collect",
+   "Treating a signal as proof of intent"
+  ],
+  "status": "Untested draft",
+  "runs": []
+ },
+ {
+  "slug": "signal-based-first-touch",
+  "n": 2,
+  "name": "Signal-based first touch",
+  "goal": "Write a short first message that references one real, public signal and makes a low-pressure ask.",
+  "when": "After an account brief exists with a dated, sourced signal.",
+  "inputs": [
+   "The account brief",
+   "One public signal with source URL and date",
+   "Your offer in one sentence",
+   "Your sender profile (role, why you are relevant)"
+  ],
+  "steps": [
+   {
+    "tool": "Claude",
+    "do": "Run the first-touch prompt with the brief and one signal. Ask for two variants."
+   },
+   {
+    "tool": "You",
+    "do": "Fact-check every claim against the source. Delete anything you cannot source."
+   },
+   {
+    "tool": "You",
+    "do": "Read it aloud. If it sounds like a template, rewrite the first line yourself."
+   },
+   {
+    "tool": "LinkedIn / email tool",
+    "do": "Send manually or schedule in your sending tool with your own opt-out line."
+   },
+   {
+    "tool": "CRM / sheet",
+    "do": "Log send date, variant, signal used and whether you edited the draft."
+   }
+  ],
+  "prompt": "Write two first-touch messages (max 90 words each) to [role] at [company].\n\nPublic signal: [signal] (source: [URL], date: [date])\nMy offer, one sentence: [offer]\nWhy I am relevant: [one sentence]\n\nRules:\n- Mention the signal once, factually. No flattery.\n- Explain the possible link to my offer in one sentence, and say it is a guess.\n- End with a low-pressure question they can answer in a few words.\n- No jargon, no exclamation marks, no fake urgency.\n- Do not state anything about the company that is not in the signal above.\nThen list every factual claim you made so I can verify it.",
+  "review": "A person reads and sends every message. Nothing is auto-sent. Remove any claim without a source.",
+  "stop": [
+   "You cannot source the signal",
+   "The message needs more than one personal detail to feel relevant: choose another account",
+   "The recipient has opted out or asked not to be contacted"
+  ],
+  "metrics": [
+   "Reply rate",
+   "Positive reply rate",
+   "% of drafts you rewrote heavily",
+   "Complaints or opt-outs"
+  ],
+  "risks": [
+   "Invented personal details",
+   "Personalisation that feels invasive",
+   "Sending at a volume that harms sender reputation"
+  ],
+  "status": "Untested draft",
+  "runs": []
+ },
+ {
+  "slug": "follow-up-sequence",
+  "n": 3,
+  "name": "Follow-up sequence with stop rules",
+  "goal": "Follow up politely with something useful each time, and stop at clear limits.",
+  "when": "For anyone who has not replied to the first message after a few days.",
+  "inputs": [
+   "The first message",
+   "One genuinely useful asset or insight for each follow-up",
+   "Your maximum number of touches"
+  ],
+  "steps": [
+   {
+    "tool": "Claude",
+    "do": "Run the follow-up prompt to draft three short follow-ups that each add something new."
+   },
+   {
+    "tool": "You",
+    "do": "Check each follow-up adds value you can actually deliver. Cut any that only 'bump' the thread."
+   },
+   {
+    "tool": "Email tool / LinkedIn",
+    "do": "Schedule with a gap of several days between touches. Exclude anyone who replied or opted out."
+   },
+   {
+    "tool": "CRM / sheet",
+    "do": "Mark the sequence status. After the last touch, move the contact to 'closed, no response' for a cooling-off period."
+   }
+  ],
+  "prompt": "Here is my first message and the contact's role:\n[paste]\n\nDraft three follow-ups, each under 70 words:\n1. Adds one short, specific insight relevant to their role.\n2. Shares a small, useful resource or example (describe it; I will attach it).\n3. A polite closing note that makes it easy to say 'not now' and stops there.\n\nRules: no guilt-tripping, no 'just checking in', no pressure, each message stands alone. List what I need to supply for each (the insight, the resource).",
+  "review": "You confirm each follow-up delivers real value and that stop rules are set before you start.",
+  "stop": [
+   "Any reply, positive or negative",
+   "An opt-out or complaint",
+   "After the third touch"
+  ],
+  "metrics": [
+   "Reply rate by touch number",
+   "Opt-out rate by touch",
+   "Meetings booked from follow-ups versus first touch"
+  ],
+  "risks": [
+   "Pestering that damages your reputation",
+   "Sending to people who asked you to stop",
+   "Follow-ups that add nothing"
+  ],
+  "status": "Untested draft",
+  "runs": []
+ },
+ {
+  "slug": "reply-triage-and-qualification",
+  "n": 4,
+  "name": "Reply triage and qualification",
+  "goal": "Sort replies quickly, draft careful responses, and keep the CRM accurate.",
+  "when": "Daily, for every reply you receive.",
+  "inputs": [
+   "The reply text",
+   "The original message and account brief",
+   "Your qualification questions"
+  ],
+  "steps": [
+   {
+    "tool": "Claude",
+    "do": "Paste the reply with the original message. Run the triage prompt to classify and draft a response."
+   },
+   {
+    "tool": "You",
+    "do": "Check the classification. Positive and sensitive replies are always answered by you personally."
+   },
+   {
+    "tool": "Email tool / LinkedIn",
+    "do": "Send your edited response. Honour opt-outs immediately."
+   },
+   {
+    "tool": "CRM / sheet",
+    "do": "Update status, next step and a one-line note. Add the contact to the suppression list if they opted out."
+   }
+  ],
+  "prompt": "Classify this reply and draft a response.\n\nOriginal message:\n[paste]\n\nReply:\n[paste]\n\nClassify as one of: interested, not now, wrong person, objection, unsubscribe, out-of-office, unclear.\nThen:\n1. Give your reasoning in one sentence.\n2. Draft a response under 80 words (for 'unsubscribe', only confirm removal).\n3. Suggest a CRM note (one line) and next step.\n4. Flag anything I should handle personally (complaint, legal wording, pricing question).\nDo not make claims about my product that I have not given you.",
+  "review": "You handle every interested, sensitive or unclear reply yourself. Claude drafts and classifies only.",
+  "stop": [
+   "Any unsubscribe or complaint: stop and suppress",
+   "Legal or compliance wording: escalate to a person"
+  ],
+  "metrics": [
+   "Median time to respond",
+   "% of replies classified correctly on your spot check",
+   "Meetings booked per positive reply"
+  ],
+  "risks": [
+   "Misclassifying a negative reply",
+   "Ignoring opt-outs",
+   "Over-promising in an automated response"
+  ],
+  "status": "Untested draft",
+  "runs": []
+ }
+]

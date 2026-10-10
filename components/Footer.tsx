@@ -13,6 +13,7 @@ export function Footer() {
           <h2>Learn</h2>
           <Link href="/learn">Start here: learn the basics</Link>
           <Link href="/prompts">Prompt library</Link>
+          <Link href="/templates">Outbound templates</Link>
           <Link href="/roles">Guides by role</Link>
           <Link href="/features">Feature guides</Link>
           <Link href="/safety">Safety and privacy</Link>
