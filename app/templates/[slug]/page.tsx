@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import templates from "@/content/templates.json";
-import { CopyButton } from "@/components/CopyButton";
+import { PromptActions } from "@/components/interactive/GuidedPrompt";
 import { ResultsCalculator } from "@/components/interactive/ResultsCalculator";
 import { shortDesc, shortTitle } from "@/lib/seo";
 
@@ -61,9 +61,9 @@ export default async function TemplatePage({ params }: Props) {
 
         <section className="sim">
           <p className="eyebrow">Claude prompt</p>
-          <h2>Copy, fill the brackets, run</h2>
+          <h2>Answer a few questions, then run</h2>
           <pre className="prompt-text">{t.prompt}</pre>
-          <div className="pcard-actions"><CopyButton text={t.prompt} /></div>
+          <PromptActions prompt={t.prompt} title={t.name} />
         </section>
 
         <section className="sim">

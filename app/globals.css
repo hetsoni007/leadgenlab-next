@@ -366,3 +366,12 @@ html[data-text="l"]{--prose-size:21.5px}
 .wf li:before{content:counter(w);position:absolute;left:14px;top:14px;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;font:700 14px var(--sans)}
 .wf-tool{display:inline-block;margin-bottom:4px;padding:2px 10px;border-radius:99px;background:rgba(99,102,241,.14);color:var(--accent);font:700 11px var(--sans);letter-spacing:.08em;text-transform:uppercase}
 .wf p{margin:0}
+
+/* guided prompt builder */
+.guided{margin-top:14px;padding:18px;border-radius:16px;background:rgba(99,102,241,.07);border:1.5px solid rgba(67,56,202,.25)}
+.guided-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.guided-head .btn{margin-left:auto}
+.guided-q .field textarea{min-height:130px}
+.guided-label{margin:16px 0 6px;font:700 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.prompt-text mark.mk-filled{background:rgba(13,148,136,.18);color:#0b5d56}
+.prompt-actions{display:grid;gap:4px}

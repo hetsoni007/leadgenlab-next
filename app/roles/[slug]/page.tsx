@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import roles from "@/content/roles.json";
 import prompts from "@/content/prompts.json";
-import { CopyButton } from "@/components/CopyButton";
+import { PromptActions } from "@/components/interactive/GuidedPrompt";
 import { shortDesc, shortTitle } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -52,7 +52,7 @@ export default async function RolePage({ params }: Props) {
                   <p className="muted" style={{ margin: 0 }}>{t.what}</p>
                   {p && <pre className="prompt-text">{p.prompt}</pre>}
                   <p className="check"><b>Check:</b> {t.check}</p>
-                  {p && <div className="pcard-actions"><CopyButton text={p.prompt} /></div>}
+                  {p && <PromptActions prompt={p.prompt} title={t.name} />}
                 </article>
               );
             })}

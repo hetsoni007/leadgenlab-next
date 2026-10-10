@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { PromptActions } from "@/components/interactive/GuidedPrompt";
 
 export type PromptItem = { id: string; cat: string; title: string; role: string; prompt: string; check: string; tip: string };
 
@@ -16,21 +17,10 @@ function Highlight({ text }: { text: string }) {
 export function PromptLibrary({ items, cats }: { items: PromptItem[]; cats: string[] }) {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("All");
-  const [copied, setCopied] = useState<string | null>(null);
 
   const list = useMemo(() => items.filter((p) =>
     (cat === "All" || p.cat === cat) &&
     (!q.trim() || (p.title + " " + p.prompt + " " + p.role).toLowerCase().includes(q.trim().toLowerCase()))), [items, q, cat]);
-
-  async function copy(p: PromptItem) {
-    try {
-      await navigator.clipboard.writeText(p.prompt);
-      setCopied(p.id);
-      setTimeout(() => setCopied((c) => (c === p.id ? null : c)), 2000);
-    } catch {
-      setCopied(null);
-    }
-  }
 
   return (
     <div>
@@ -57,8 +47,8 @@ export function PromptLibrary({ items, cats }: { items: PromptItem[]; cats: stri
             <pre className="prompt-text"><Highlight text={p.prompt} /></pre>
             <p className="check"><b>Check before you use it:</b> {p.check}</p>
             {p.tip && <p className="muted tip">{p.tip}</p>}
+            <PromptActions prompt={p.prompt} title={p.title} />
             <div className="pcard-actions">
-              <button type="button" className="btn btn-sm" onClick={() => copy(p)}>{copied === p.id ? "Copied ✓" : "Copy prompt"}</button>
               <Link className="btn btn-ghost btn-sm" href="/learn#prompt-lab">Score it in the lab</Link>
             </div>
           </article>
