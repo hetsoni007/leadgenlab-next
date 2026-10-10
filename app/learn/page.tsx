@@ -47,6 +47,15 @@ export default function Learn() {
       <div className="wrap" style={{ paddingBottom: 24 }}>
         <FaqBrowser />
       </div>
+      <div className="wrap" style={{ paddingBottom: 24 }}>
+        <p className="eyebrow">Keep exploring</p>
+        <div className="cards">
+          <Link href="/roles" className="card"><span className="tag">Guides</span><h3>Guides by role</h3><p>Sales, marketing, founders, students, creators and developers.</p></Link>
+          <Link href="/safety" className="card"><span className="tag">Safety</span><h3>What not to paste</h3><p>A quick checker and a six-habit routine.</p></Link>
+          <Link href="/glossary" className="card"><span className="tag">Reference</span><h3>AI glossary</h3><p>30 terms in plain English.</p></Link>
+          <Link href="/pricing" className="card"><span className="tag">Cost</span><h3>Choose a plan</h3><p>A method instead of a stale price table.</p></Link>
+        </div>
+      </div>
       <div className="wrap">
         <section className="cta-band">
           <h2>Ready to go one level deeper?</h2>

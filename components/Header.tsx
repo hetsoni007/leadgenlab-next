@@ -3,12 +3,10 @@ import Link from "next/link";
 const NAV = [
   { href: "/learn", label: "Learn" },
   { href: "/prompts", label: "Prompts" },
+  { href: "/roles", label: "Roles" },
+  { href: "/compare", label: "Compare" },
   { href: "/ai-updates", label: "Updates" },
-  { href: "/guides", label: "Guides" },
-  { href: "/workflows", label: "Workflows" },
-  { href: "/quiz", label: "AI readiness" },
   { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
 ];
 
 export function Header() {

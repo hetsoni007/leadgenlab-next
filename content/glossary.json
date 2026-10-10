@@ -1,0 +1,122 @@
+[
+ {
+  "term": "Prompt",
+  "def_": "The instruction or question you give an AI assistant."
+ },
+ {
+  "term": "Model",
+  "def_": "The trained system that produces the responses; assistants can run on different models."
+ },
+ {
+  "term": "LLM (large language model)",
+  "def_": "A model trained on large amounts of text to predict and generate language."
+ },
+ {
+  "term": "Context window",
+  "def_": "How much text the model can consider at once, including your prompt and its reply."
+ },
+ {
+  "term": "Token",
+  "def_": "A small chunk of text (part of a word) that models read and bill by."
+ },
+ {
+  "term": "Hallucination",
+  "def_": "A confident answer that is false or invented, such as a fake source or statistic."
+ },
+ {
+  "term": "Grounding",
+  "def_": "Basing answers on provided or verifiable sources instead of memory alone."
+ },
+ {
+  "term": "RAG (retrieval-augmented generation)",
+  "def_": "Fetching relevant documents first and giving them to the model before it answers."
+ },
+ {
+  "term": "Fine-tuning",
+  "def_": "Further training a model on specific data to change its behaviour."
+ },
+ {
+  "term": "System prompt",
+  "def_": "Hidden instructions that set an assistant's role and rules."
+ },
+ {
+  "term": "Temperature",
+  "def_": "A setting that controls how varied or predictable the output is."
+ },
+ {
+  "term": "Agent",
+  "def_": "An AI system that plans and takes steps or uses tools, not just chats."
+ },
+ {
+  "term": "Tool use",
+  "def_": "When a model calls external functions such as search, code or apps."
+ },
+ {
+  "term": "API",
+  "def_": "A way for software to talk to a model directly, often billed by usage."
+ },
+ {
+  "term": "Multimodal",
+  "def_": "Able to work with more than text, such as images, audio or files."
+ },
+ {
+  "term": "Embedding",
+  "def_": "A numeric representation of text used for search and similarity."
+ },
+ {
+  "term": "Chain of thought",
+  "def_": "Step-by-step reasoning, sometimes shown, sometimes internal."
+ },
+ {
+  "term": "Guardrails",
+  "def_": "Rules and checks that limit what an AI system will do."
+ },
+ {
+  "term": "Human in the loop",
+  "def_": "A person reviews or approves before an action takes effect."
+ },
+ {
+  "term": "Prompt injection",
+  "def_": "Hidden instructions in content that try to hijack an assistant's behaviour."
+ },
+ {
+  "term": "Data retention",
+  "def_": "How long a provider keeps your inputs and outputs."
+ },
+ {
+  "term": "Training data",
+  "def_": "The material a model learned from."
+ },
+ {
+  "term": "Benchmark",
+  "def_": "A standard test used to compare models; results may not match your task."
+ },
+ {
+  "term": "Inference",
+  "def_": "Running a trained model to get an answer."
+ },
+ {
+  "term": "Open-weight model",
+  "def_": "A model whose trained parameters are published so others can run it."
+ },
+ {
+  "term": "Latency",
+  "def_": "How long you wait for a response."
+ },
+ {
+  "term": "Rate limit",
+  "def_": "A cap on how many requests or messages you can send in a period."
+ },
+ {
+  "term": "Workflow",
+  "def_": "A repeatable sequence of steps, with or without AI, that produces a result."
+ },
+ {
+  "term": "Evaluation (eval)",
+  "def_": "A structured test of whether an AI workflow meets your quality bar."
+ },
+ {
+  "term": "Pilot",
+  "def_": "A small, time-boxed trial used to decide whether to roll something out."
+ }
+]

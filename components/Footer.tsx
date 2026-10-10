@@ -13,6 +13,12 @@ export function Footer() {
           <h2>Learn</h2>
           <Link href="/learn">Start here: learn the basics</Link>
           <Link href="/prompts">Prompt library</Link>
+          <Link href="/roles">Guides by role</Link>
+          <Link href="/features">Feature guides</Link>
+          <Link href="/safety">Safety and privacy</Link>
+          <Link href="/pricing">Plans and cost</Link>
+          <Link href="/india">Using AI in India</Link>
+          <Link href="/glossary">Glossary</Link>
           <Link href="/compare">ChatGPT vs Claude tests</Link>
           <Link href="/ai-updates">Release updates</Link>
           <Link href="/weekly-reset">Weekly reset</Link>

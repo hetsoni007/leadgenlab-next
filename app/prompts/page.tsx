@@ -4,7 +4,7 @@ import prompts from "@/content/prompts.json";
 
 export const metadata: Metadata = {
   title: "AI prompt library for work and study",
-  description: "30 copy-ready prompts for ChatGPT and Claude, grouped by task and role, each with what to check before you rely on the answer.",
+  description: "34 copy-ready prompts for ChatGPT and Claude, grouped by task and role, each with what to check before you rely on the answer.",
   alternates: { canonical: "/prompts" },
 };
 

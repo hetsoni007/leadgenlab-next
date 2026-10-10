@@ -1,0 +1,106 @@
+[
+ {
+  "slug": "projects",
+  "title": "Projects and workspaces",
+  "what": "A way to group conversations, files and instructions for one piece of ongoing work, so you do not start from zero each time.",
+  "why": "Repeated work benefits from stable context: the same instructions, the same reference files, the same tone.",
+  "use": [
+   "Keep a standing brief for a client, course or product.",
+   "Store reference documents the assistant should use.",
+   "Share a consistent setup with teammates where the plan allows."
+  ],
+  "test": [
+   "Create one workspace for a real recurring task.",
+   "Add a short instruction and one reference file.",
+   "Run the same task twice, with and without the workspace, and compare accuracy and consistency."
+  ],
+  "risks": [
+   "Stale files quietly steering answers",
+   "Putting confidential material in a shared space",
+   "Assuming it has read everything you uploaded"
+  ],
+  "verify": [
+   "What each product calls this feature and whether your plan includes it",
+   "File count and size limits",
+   "Who can see shared items"
+  ]
+ },
+ {
+  "slug": "file-uploads",
+  "title": "File uploads and document analysis",
+  "what": "Attaching documents, spreadsheets or images so the assistant works from your material instead of general knowledge.",
+  "why": "Answers grounded in your source are easier to check than answers from memory.",
+  "use": [
+   "Summarise a long report with quotes.",
+   "Extract data from a table or PDF.",
+   "Ask questions about a contract or policy you have the right to share."
+  ],
+  "test": [
+   "Use a document you know well.",
+   "Ask for a summary with an exact quote for each point.",
+   "Check three quotes against the source and look for what it missed."
+  ],
+  "risks": [
+   "Uploading confidential or personal data",
+   "Missed pages or garbled tables",
+   "Trusting a summary without spot checks"
+  ],
+  "verify": [
+   "Supported file types and size limits on your plan",
+   "How uploaded files are stored and for how long",
+   "Whether files are used for training under your settings"
+  ]
+ },
+ {
+  "slug": "memory",
+  "title": "Memory and personalisation",
+  "what": "Features that let an assistant remember preferences or facts about you across conversations.",
+  "why": "Memory can save repeating yourself, but it also changes answers in ways you may not notice.",
+  "use": [
+   "Remember your preferred tone and format.",
+   "Keep role context so answers fit your job.",
+   "Reduce repeated setup instructions."
+  ],
+  "test": [
+   "Tell it one harmless preference and start a new chat.",
+   "See whether and how it applies it.",
+   "Find where memories are listed and practise deleting one."
+  ],
+  "risks": [
+   "Sensitive details stored longer than you expect",
+   "Old preferences colouring new answers",
+   "Shared accounts leaking context between people"
+  ],
+  "verify": [
+   "Whether memory is on by default for your plan",
+   "Where to view, edit and delete what is stored",
+   "How to switch it off or use temporary chats"
+  ]
+ },
+ {
+  "slug": "agents",
+  "title": "Agents and automation",
+  "what": "Assistants that take multi-step actions, use tools, or run tasks for you, rather than only answering questions.",
+  "why": "Agents can save time on repeatable tasks, and they raise the cost of mistakes because they act.",
+  "use": [
+   "Prepare drafts from a trigger, then wait for approval.",
+   "Gather and compare information across sources.",
+   "Handle routine steps in a defined process."
+  ],
+  "test": [
+   "Start with a task that is reversible and low stakes.",
+   "Require approval before anything is sent or changed.",
+   "Review every step it took and what it accessed."
+  ],
+  "risks": [
+   "Actions you did not intend",
+   "Excess access to accounts and data",
+   "Hard-to-spot errors across many steps"
+  ],
+  "verify": [
+   "Which actions need your approval",
+   "Which apps and data it can access, and how to revoke access",
+   "Logs or history of what it did"
+  ]
+ }
+]

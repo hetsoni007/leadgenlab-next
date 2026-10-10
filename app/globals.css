@@ -347,3 +347,15 @@ html[data-text="l"]{--prose-size:21.5px}
 .score select{min-height:44px;min-width:92px;padding:0 10px;border-radius:10px;border:1.5px solid rgba(67,56,202,.22);background:rgba(255,255,255,.85);font:inherit}
 .score tfoot th,.score tfoot td{font-weight:700;border-bottom:0}
 .brand-logo{display:block;width:36px;height:36px;border-radius:10px}
+
+/* safety, glossary */
+.light{display:flex;gap:14px;align-items:flex-start;margin-top:16px;padding:18px;border-radius:16px;border:1.5px solid}
+.light p{margin:4px 0 0}
+.light-dot{flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%}
+.light-ok{background:rgba(13,148,136,.1);border-color:rgba(13,148,136,.5)}.light-ok .light-dot{background:#0d9488}
+.light-care{background:rgba(245,158,11,.12);border-color:rgba(217,119,6,.5)}.light-care .light-dot{background:#d97706}
+.light-no{background:rgba(220,38,38,.09);border-color:rgba(220,38,38,.5)}.light-no .light-dot{background:#dc2626}
+.gloss{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:14px;margin:0}
+.gloss-item{padding:18px;border-radius:16px;background:var(--glass-strong);border:1px solid var(--glass-line);box-shadow:var(--shadow)}
+.gloss dt{font:600 20px var(--serif);margin:0 0 6px}
+.gloss dd{margin:0;color:var(--muted);font-size:15px}

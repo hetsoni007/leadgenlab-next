@@ -268,5 +268,41 @@
   "prompt": "Act as an interviewer for a [role] position. Ask me one question at a time. After each answer, give two strengths and one improvement. After five questions, summarise my pattern.",
   "check": "Treat the feedback as practice, not a prediction.",
   "tip": ""
+ },
+ {
+  "id": "31",
+  "cat": "Coding and technical",
+  "title": "Explain this code",
+  "role": "Developers",
+  "prompt": "Explain what the code below does, step by step, in plain English. Then list any assumptions it makes, inputs that could break it, and anything that looks risky. Do not rewrite it.\n\nCode:\n[paste code]",
+  "check": "Read the code yourself and confirm the explanation matches.",
+  "tip": "Never paste secrets, keys or proprietary code you are not allowed to share."
+ },
+ {
+  "id": "32",
+  "cat": "Coding and technical",
+  "title": "Write tests for a function",
+  "role": "Developers",
+  "prompt": "Write tests for the function below using [framework]. Cover normal cases, edge cases (empty, null, very large) and one failure case. Explain what each test protects against. Do not change the function.\n\nFunction:\n[paste]",
+  "check": "Run the tests. A test that passes proves nothing until you have seen it fail.",
+  "tip": ""
+ },
+ {
+  "id": "33",
+  "cat": "Coding and technical",
+  "title": "Review a change for risk",
+  "role": "Developers",
+  "prompt": "Review the diff below as a careful reviewer. List: possible bugs, security concerns, missing tests, and anything unclear. Rank by severity. If you are not sure, say so rather than guessing.\n\nDiff:\n[paste]",
+  "check": "Treat it as a second pair of eyes, not the approver. A person decides.",
+  "tip": ""
+ },
+ {
+  "id": "34",
+  "cat": "Coding and technical",
+  "title": "Debug from an error",
+  "role": "Developers",
+  "prompt": "Here is an error and the relevant code. Give me the three most likely causes ranked by probability, and for each the quickest check that would confirm or rule it out. Do not propose a fix until I confirm the cause.\n\nError:\n[paste]\n\nCode:\n[paste]",
+  "check": "Run the checks in order. Do not apply a fix you do not understand.",
+  "tip": ""
  }
 ]
