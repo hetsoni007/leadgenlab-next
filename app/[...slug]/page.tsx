@@ -81,7 +81,7 @@ export default async function ContentPage({ params }: Props) {
               <Link key={c.path} href={c.path} className="card">
                 {dateOf(c) && <time dateTime={dateOf(c)!}>{formatDate(dateOf(c)!)}</time>}
                 <h3>{c.title}</h3>
-                {c.description && <p>{c.description.length > 150 ? c.description.slice(0, 147) + "…" : c.description}</p>}
+                {c.description && <p>{c.description}</p>}
               </Link>
             ))}
           </div>

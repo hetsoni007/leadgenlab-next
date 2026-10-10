@@ -4,7 +4,7 @@ import { SITE } from "@/lib/content";
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div className="wrap footer-grid">
+      <div className="wrap"><div className="footer-card"><div className="footer-grid">
         <div>
           <p className="brand-line">LeadGen<em>Lab</em></p>
           <p className="muted">Practical AI workflows, release explainers and consulting for teams that need results, not hype.</p>
@@ -24,10 +24,10 @@ export function Footer() {
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
         </div>
       </div>
-      <div className="wrap footer-base">
+      <div className="footer-base">
         <span>© {new Date().getFullYear()} LeadGenLab, by Soni Consultancy Services.</span>
         <Link href="/about/editorial-standards">Editorial standards</Link>
-      </div>
+      </div></div></div>
     </footer>
   );
 }

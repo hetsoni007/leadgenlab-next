@@ -1,31 +1,62 @@
 import Link from "next/link";
 import { childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
 
+function short(d: string, n: number) {
+  if (d.length <= n) return d;
+  const cut = d.slice(0, n);
+  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\s]+$/, "") + "…";
+}
+
 export default function Home() {
-  const latest = childrenOf("ai-updates").slice(0, 6);
+  const updates = childrenOf("ai-updates");
+  const [top, ...rest] = updates;
+  const compact = rest.slice(0, 4);
+  const grid = updates.slice(0, 6);
   return (
     <>
       <section className="hero">
-        <div className="wrap">
-          <p className="eyebrow">AI workflow consulting · Claude + ChatGPT</p>
-          <h1>Turn AI releases into <em>working</em> workflows.</h1>
-          <p className="lede">
-            We track every Claude and ChatGPT release, explain what actually changed, and help sales,
-            marketing and operations teams turn it into a measurable process.
-          </p>
-          <div className="actions">
-            <Link className="btn" href="/contact">Request an AI workflow audit</Link>
-            {SITE.bookingUrl ? (
-              <a className="btn btn-ghost" href={SITE.bookingUrl}>Book a call</a>
-            ) : (
-              <Link className="btn btn-ghost" href="/ai-updates">Read the latest updates</Link>
+        <div className="wrap hero-grid">
+          <div>
+            <p className="eyebrow">AI workflow consulting · Claude + ChatGPT</p>
+            <h1>Turn AI releases into <span className="grad-text">working</span> workflows.</h1>
+            <p className="lede">
+              We track every Claude and ChatGPT release, explain what actually changed, and help sales,
+              marketing and operations teams turn it into a measurable process.
+            </p>
+            <div className="actions">
+              <Link className="btn" href="/contact">Request an AI workflow audit</Link>
+              {SITE.bookingUrl ? (
+                <a className="btn btn-ghost" href={SITE.bookingUrl}>Book a call</a>
+              ) : (
+                <Link className="btn btn-ghost" href="/ai-updates">Read the updates</Link>
+              )}
+            </div>
+            <div className="proof">
+              <span>Official sources linked</span>
+              <span>Plain English + technical</span>
+              <span>Tested when reproducible</span>
+            </div>
+          </div>
+
+          <aside className="panel" aria-label="Latest releases">
+            <div className="panel-head"><span className="live">Latest releases</span><Link href="/ai-updates">View all →</Link></div>
+            {top && (
+              <Link href={top.path} className="feature">
+                {dateOf(top) && <time dateTime={dateOf(top)!}>{formatDate(dateOf(top)!)}</time>}
+                <h3>{top.title}</h3>
+              </Link>
             )}
-          </div>
-          <div className="proof">
-            <div><strong>Official sources</strong><span>Every release links to the vendor&apos;s own page.</span></div>
-            <div><strong>Plain English + technical</strong><span>Two depths for every update.</span></div>
-            <div><strong>Tested, not guessed</strong><span>Hands-on checks when we can reproduce a claim.</span></div>
-          </div>
+            <ul className="mini">
+              {compact.map((p) => (
+                <li key={p.path}>
+                  <Link href={p.path}>
+                    {dateOf(p) && <time dateTime={dateOf(p)!}>{formatDate(dateOf(p)!).replace(/ 20\d\d$/, "")}</time>}
+                    <span>{short(p.title, 78)}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </div>
       </section>
 
@@ -33,17 +64,18 @@ export default function Home() {
         <div className="wrap">
           <div className="section-head">
             <div>
-              <p className="eyebrow">Latest releases</p>
-              <h2>What changed this week</h2>
+              <p className="eyebrow">What changed</p>
+              <h2>Explained, not just announced</h2>
             </div>
             <Link href="/ai-updates">All updates →</Link>
           </div>
           <div className="cards">
-            {latest.map((p) => (
-              <Link key={p.path} href={p.path} className="card">
+            {grid.map((p, i) => (
+              <Link key={p.path} href={p.path} className={`card${i === 0 ? " card-wide" : ""}`}>
                 {dateOf(p) && <time dateTime={dateOf(p)!}>{formatDate(dateOf(p)!)}</time>}
                 <h3>{p.title}</h3>
-                {p.description && <p>{p.description.length > 140 ? p.description.slice(0, 137) + "…" : p.description}</p>}
+                {p.description && <p>{p.description}</p>}
+                <span className="more">Read the explainer →</span>
               </Link>
             ))}
           </div>
@@ -53,7 +85,7 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <p className="eyebrow">How an engagement works</p>
-          <h2 style={{ marginBottom: 28 }}>From audit to a workflow your team uses</h2>
+          <h2 style={{ marginBottom: 26 }}>From audit to a workflow your team uses</h2>
           <ol className="steps">
             <li><h3>Audit</h3><p>We map where your team loses time and which tasks suit Claude or ChatGPT.</p></li>
             <li><h3>Design</h3><p>One workflow at a time, with a human check where it matters.</p></li>
