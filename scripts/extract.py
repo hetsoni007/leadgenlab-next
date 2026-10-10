@@ -7,7 +7,8 @@ SRC = Path(sys.argv[1]).expanduser()
 OUT = Path(__file__).resolve().parent.parent / "content" / "pages.json"
 DROP_CLASSES = {"workflow-demo", "role-lab", "route-thread", "consult-bridge", "skip-link",
                 "demo-topline", "newsletter", "finder", "tool-finder", "flow-presets"}
-KEEP_ATTRS = {"href", "src", "alt", "rel", "target", "id", "colspan", "rowspan", "datetime"}
+KEEP_ATTRS = {"href", "src", "alt", "rel", "target", "id", "colspan", "rowspan", "datetime", "class"}
+KEEP_CLASSES = {"callout", "source-link", "example-flow", "example-node", "story-visual", "update-stamp", "visual-caption"}
 
 pages = []
 for f in sorted(SRC.rglob("*.html")):
@@ -41,8 +42,23 @@ for f in sorted(SRC.rglob("*.html")):
     md = soup.find("meta", attrs={"name": "description"})
     description = (md.get("content", "") if md else "") or intro
     eyebrow = ""
+    # drop a leading h2 that just repeats the page title
+    first = main.find("h2")
+    if first and first.get_text(" ", strip=True).lower() == title.lower():
+        first.decompose()
     for t in main.find_all(True):
         t.attrs = {k: v for k, v in t.attrs.items() if k in KEEP_ATTRS}
+        if "class" in t.attrs:
+            keep = [c for c in t.attrs["class"] if c in KEEP_CLASSES]
+            if keep:
+                t.attrs["class"] = keep
+            else:
+                del t.attrs["class"]
+    seen = {}
+    for h in main.find_all(["h2", "h3"]):
+        base = re.sub(r"[^a-z0-9]+", "-", h.get_text(" ", strip=True).lower()).strip("-")[:48] or "section"
+        seen[base] = seen.get(base, 0) + 1
+        h["id"] = base if seen[base] == 1 else f"{base}-{seen[base]}"
     html = re.sub(r"\s+", " ", main.decode_contents()).strip()
     parts = list(rel.parts)
     if parts[-1] == "index.html":

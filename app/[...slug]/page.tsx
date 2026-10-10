@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Toc } from "@/components/Toc";
+import { TextSize } from "@/components/TextSize";
+import { headingsOf, readingMinutes } from "@/lib/toc";
 import { allPages, childrenOf, dateOf, formatDate, getPage, rewriteLinks, SECTION_LABEL } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string[] }> };
@@ -35,6 +38,10 @@ export default async function ContentPage({ params }: Props) {
   const showBody = !(showCards && page.html.length > 8000) && page.html.length > 0;
   const date = dateOf(page);
   const section = slug[0];
+  const body = showBody ? rewriteLinks(page.html, page.legacy) : "";
+  const toc = showBody ? headingsOf(body) : [];
+  const minutes = showBody ? readingMinutes(body) : 0;
+  const longRead = showBody && minutes >= 2;
 
   return (
     <>
@@ -47,12 +54,23 @@ export default async function ContentPage({ params }: Props) {
           {date && <p className="eyebrow">{formatDate(date)}</p>}
           <h1>{page.title}</h1>
           {page.intro && <p className="lede">{page.intro}</p>}
+          {showBody && (
+            <p className="meta">
+              {date && <span>{formatDate(date)}</span>}
+              <span>{minutes} min read</span>
+              <span>Plain English first, technical detail below</span>
+            </p>
+          )}
         </div>
       </section>
 
       {showBody && (
-        <div className="wrap">
-          <div className="prose" dangerouslySetInnerHTML={{ __html: rewriteLinks(page.html, page.legacy) }} />
+        <div className="wrap article-grid">
+          <div className="prose" dangerouslySetInnerHTML={{ __html: body }} />
+          <aside className="aside" aria-label="Reading tools">
+            <TextSize />
+            {longRead && <Toc items={toc} />}
+          </aside>
         </div>
       )}
 
