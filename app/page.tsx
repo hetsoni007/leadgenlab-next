@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DailyFeed } from "@/components/DailyFeed";
 import { childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
 
 function short(d: string, n: number) {
@@ -59,6 +60,8 @@ export default function Home() {
           </aside>
         </div>
       </section>
+
+      <DailyFeed />
 
       <section className="section">
         <div className="wrap">
