@@ -1,0 +1,15 @@
+{
+  "checkedOn": "2026-10-11",
+  "items": [
+    {
+      "date": "2026-09-13",
+      "person": "Sam Altman",
+      "org": "OpenAI",
+      "headline": "OpenAI unlikely to go public in 2026",
+      "summary": "Press coverage of an interview reports that Altman said an IPO this year would be ill-advised and tied the view to safety work still to do. Reported secondhand; we have not seen the original interview.",
+      "url": "https://telanganatoday.com/sam-altman-backs-cautious-ai-development-says-openai-unlikely-to-go-public-in-2026",
+      "source": "Telangana Today (report)",
+      "secondary": true
+    }
+  ]
+}
