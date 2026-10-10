@@ -15,6 +15,7 @@ export function Footer() {
           <Link href="/weekly-reset">Weekly reset</Link>
           <Link href="/guides">Guides</Link>
           <Link href="/workflows">Workflows</Link>
+          <Link href="/voices">Voices to follow</Link>
         </div>
         <div>
           <h2>Work with us</h2>

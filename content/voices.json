@@ -1,0 +1,27 @@
+{
+  "people": [
+    {
+      "name": "Thibault “Tibo” Sottiaux",
+      "handle": "thsottiaux",
+      "profile": "https://x.com/thsottiaux",
+      "role": "Works on Codex at OpenAI (third-party sources describe the title differently)",
+      "why": "Posts about Codex and how ChatGPT and Codex fit together. Useful for early signals before official release notes.",
+      "entries": [
+        {
+          "date": "",
+          "title": "Podcast: How OpenAI's Codex team uses their coding agent",
+          "summary": "A long-form conversation about how the Codex team itself works with a coding agent. Good background for understanding the product direction.",
+          "url": "https://every.to/podcast/how-openai-s-codex-team-uses-their-coding-agent",
+          "kind": "Interview"
+        },
+        {
+          "date": "",
+          "title": "OpenAI and Codex with Thibault Sottiaux and Ed Bayes",
+          "summary": "Software Engineering Daily interview on building Codex and what it is designed to do for engineering teams.",
+          "url": "https://softwareengineeringdaily.com/podcasts/openai-and-codex-with-thibault-sottiaux-and-ed-bayes/",
+          "kind": "Interview"
+        }
+      ]
+    }
+  ]
+}
