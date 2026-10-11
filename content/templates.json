@@ -115,8 +115,16 @@
    "Personalisation that feels invasive",
    "Sending at a volume that harms sender reputation"
   ],
-  "status": "Untested draft",
-  "runs": []
+  "status": "Run once (AI-checked, not yet human-reviewed, nothing sent)",
+  "runs": [
+   {
+    "date": "2026-10-11",
+    "sample": "10 accounts from the ICP test (IT and software services firms in India)",
+    "setup": "Searched each account's own site and public results for a dated, sourceable signal (rule: public, dated within about 6 months). For accounts with a usable signal, drafted 2 variants with the template prompt, then checked every factual claim against its source and the prompt rules by script. Nothing was sent.",
+    "result": "Usable dated signal found for 2 of 10 accounts (20%); 1 account had only stale posts (over 15 months); 7 had none. 4 drafts written (2 per eligible account), 60 to 64 words each. All 4 passed the rule checks (90 words or fewer, one signal, no exclamation marks, no flattery, ends with a low-pressure question). 5 of 5 distinct factual claims matched their sources.",
+    "notes": "The template stops when no signal can be sourced, so 8 of 10 accounts got no draft. Sources are blog or site index pages, not individual post URLs. The offer line is an assumption, because the ICP (prospect or partner) is unresolved. No messages were sent, so reply and meeting rates are unknown. 4 drafts is a very small sample."
+   }
+  ]
  },
  {
   "slug": "follow-up-sequence",
