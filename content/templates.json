@@ -52,8 +52,16 @@
    "Using data you were not entitled to collect",
    "Treating a signal as proof of intent"
   ],
-  "status": "Untested draft",
-  "runs": []
+  "status": "Run once (AI-scored, not yet human-reviewed)",
+  "runs": [
+   {
+    "date": "2026-10-11",
+    "sample": "10 accounts: IT and software services firms in India (6 from one Apollo company search, 4 from public directories)",
+    "setup": "Claude drafted account briefs from public web pages. One Apollo search used 1 credit. Each account scored on a 5-point rubric: located in India, size 50 to 250 evidenced, offers software/mobile/AI services, verified on an official source, dated public signal found. Scored by Claude; no human review yet.",
+    "result": "Mean fit score 3.35 of 5. 5 of 10 scored 4. 1 of 10 had a dated public signal. Official site readable for 5 of 10. 3 of 10 Apollo results were not services firms (30%). Spot-check: 17 of 17 sampled claims matched the source (4 official sites).",
+    "notes": "Apollo's employee band conflicted with one official site (400+ staff). Scores measure criteria match and research confidence, not likelihood to buy. The ICP (prospect, partner or competitor) was unresolved. Time saved was not measured. Small sample: directional only."
+   }
+  ]
  },
  {
   "slug": "signal-based-first-touch",

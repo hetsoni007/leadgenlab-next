@@ -20,7 +20,7 @@ export default function Results() {
         </div>
       </section>
       <div className="wrap sim-stack">
-        <Answer>We publish a result only when it is real and recorded: date, sample size, setup and outcome. Right now no workflow has a published performance result, and we have no client testimonials or case studies to show.</Answer>
+        <Answer>We publish a result only when it is real and recorded: date, sample size, setup and outcome. One workflow has a single small recorded run (details below). No workflow has a proven performance result, and we have no client testimonials or case studies to show.</Answer>
         <section className="sim">
           <p className="eyebrow">Current status</p>
           <h2>Workflow templates</h2>
@@ -38,7 +38,7 @@ export default function Results() {
               </tbody>
             </table>
           </div>
-          <p className="muted" style={{ marginTop: 12 }}>A first test of the ICP and account research workflow has been run and is awaiting human scoring before it is recorded.</p>
+          <p className="muted" style={{ marginTop: 12 }}>One run is recorded for ICP and account research. It was scored by Claude against a written rubric and has not yet been reviewed by a person, so treat it as directional.</p>
         </section>
         <section className="sim">
           <p className="eyebrow">Method</p>
