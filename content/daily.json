@@ -97,6 +97,38 @@
       "source": "TechCrunch (report)",
       "ours": "/ai-updates/openai-text-watermarking-2026-10-05",
       "unconfirmed": true
+    },
+    {
+      "date": "2026-10-09",
+      "tool": "Claude",
+      "title": "Managed Agents dynamic workflows in beta",
+      "summary": "Managed Agents dynamic workflows are in beta, letting an agent write programs that run many agents in phases.",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "source": "Claude Platform release notes"
+    },
+    {
+      "date": "2026-10-08",
+      "tool": "Claude",
+      "title": "Compliance API and Claude Docs updates",
+      "summary": "The Compliance API chat endpoints now return unified Claude experience chats (beta, Enterprise), and Claude Docs documents can be downloaded as Word files (beta).",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "source": "Claude Platform release notes"
+    },
+    {
+      "date": "2026-10-07",
+      "tool": "Claude",
+      "title": "Monthly API credits on Max and Team plans",
+      "summary": "Claude Max and Team plans now include monthly API credits.",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "source": "Claude Platform release notes"
+    },
+    {
+      "date": "2026-10-07",
+      "tool": "Claude",
+      "title": "Sonnet 5.5 prompt cache reads get cheaper",
+      "summary": "Prompt cache reads for Claude Sonnet 5.5 dropped to $0.10 per million tokens.",
+      "url": "https://platform.claude.com/docs/en/release-notes/overview",
+      "source": "Claude Platform release notes"
     }
   ]
 }
