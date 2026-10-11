@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import compare from "@/content/compare.json";
+import { Answer, Faq } from "@/components/Faq";
 import { Scorecard } from "@/components/interactive/Scorecard";
 import { OFFICIAL } from "@/lib/official";
 import { shortDesc, shortTitle } from "@/lib/seo";
@@ -29,6 +30,11 @@ export default async function ComparePage({ params }: Props) {
   const c = compare.find((x) => x.slug === slug);
   if (!c) notFound();
   const others = compare.filter((x) => x.slug !== slug);
+  const faq: [string, string][] = [
+    [c.title + "?", "It depends on your own work, so the reliable method is to run the same prompt in both tools and score the results. This page gives you the prompt, a sample input and a scorecard."],
+    ["How do I compare them fairly?", "Use a fresh conversation in each, the same plan tier if possible, and identical text. Read both answers fully, check any fact you can, and repeat with a second task."],
+    ["What should I verify on the official pages?", c.verify.join("; ") + "."],
+  ];
 
   return (
     <>
@@ -40,6 +46,7 @@ export default async function ComparePage({ params }: Props) {
         </div>
       </section>
       <div className="wrap sim-stack">
+        <Answer>{c.intro} Run the test below with your own material: it takes about 15 minutes.</Answer>
         <section className="sim">
           <p className="eyebrow">Step 1 · The task</p>
           <h2>{c.task}</h2>
@@ -75,6 +82,7 @@ export default async function ComparePage({ params }: Props) {
             We don&apos;t publish a fixed winner or price table here because both change often. Treat any ranking you see elsewhere as a snapshot.
           </p>
         </section>
+        <Faq items={faq} />
       </div>
 
       <div className="wrap" style={{ paddingBottom: 24 }}>

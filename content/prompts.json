@@ -304,5 +304,59 @@
   "prompt": "Here is an error and the relevant code. Give me the three most likely causes ranked by probability, and for each the quickest check that would confirm or rule it out. Do not propose a fix until I confirm the cause.\n\nError:\n[paste]\n\nCode:\n[paste]",
   "check": "Run the checks in order. Do not apply a fix you do not understand.",
   "tip": ""
+ },
+ {
+  "id": "35",
+  "cat": "People and finance",
+  "title": "Draft a job description",
+  "role": "HR",
+  "prompt": "Draft a job description for a [job title] at a [company type] in [location]. Include: purpose of the role, 5 key responsibilities, must-have versus nice-to-have skills, and a short, honest note on what makes the role hard. Use inclusive language and avoid unnecessary requirements.",
+  "check": "Check that every requirement is genuinely needed and that salary and legal wording follow your policy.",
+  "tip": ""
+ },
+ {
+  "id": "36",
+  "cat": "People and finance",
+  "title": "Structured interview questions",
+  "role": "HR",
+  "prompt": "Create 8 structured interview questions for a [job title], each with: what it assesses, what a strong answer includes, and a red flag. Use the same questions for every candidate. Avoid questions about protected characteristics.",
+  "check": "Review for fairness and legal compliance with your HR lead before use.",
+  "tip": ""
+ },
+ {
+  "id": "37",
+  "cat": "People and finance",
+  "title": "Variance commentary",
+  "role": "Finance",
+  "prompt": "Write a short commentary explaining this variance for a non-finance reader: [budget vs actual figures and known causes]. Separate what the numbers show from what is assumed. List two questions to ask the budget owner. Do not invent causes.",
+  "check": "Check every figure and cause against the source before sharing.",
+  "tip": "Use anonymised or approved figures only."
+ },
+ {
+  "id": "38",
+  "cat": "People and finance",
+  "title": "Polite payment reminder",
+  "role": "Finance",
+  "prompt": "Draft a payment reminder email for an invoice that is [number] days overdue to [recipient and relationship]. Tone: firm but respectful. Include the invoice details I give you only: [invoice number, amount, due date]. Offer one way to resolve any issue.",
+  "check": "Confirm the invoice details and your contract terms before sending.",
+  "tip": ""
+ },
+ {
+  "id": "39",
+  "cat": "People and finance",
+  "title": "Reusable support macro",
+  "role": "Support",
+  "prompt": "Turn the resolved ticket below into a reusable support reply template with placeholders for customer-specific details. Keep it under 120 words, friendly and clear, and add a one-line internal note on when NOT to use it.\n\nResolved ticket:\n[paste]",
+  "check": "A person approves macros before they are used with customers.",
+  "tip": ""
+ },
+ {
+  "id": "40",
+  "cat": "People and finance",
+  "title": "Help-centre article",
+  "role": "Support",
+  "prompt": "Turn this resolved issue into a help-centre article: a one-sentence summary, symptoms, steps to fix, what to do if it still fails, and who to contact. Write for a non-technical customer.\n\nIssue and fix:\n[paste]",
+  "check": "Test the steps yourself and remove anything you cannot verify.",
+  "tip": ""
  }
 ]

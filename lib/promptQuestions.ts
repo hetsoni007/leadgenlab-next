@@ -30,7 +30,7 @@ export const QUESTIONS: Record<string, Q> = {
   "3 adjectives and one example paragraph": { q: "Describe your brand voice: three adjectives and a sample paragraph", example: "Warm, plain, confident. Sample: ...", long: true },
   "task": { q: "Which task or process are you documenting?", example: "onboarding a new customer" },
   "level": { q: "What level?", example: "beginner / first-year / advanced" },
-  "number": { q: "How many days do you have?", example: "14" },
+  "number": { q: "How many days? (days you have, or days overdue)", example: "14" },
   "exam": { q: "What is the exam or deadline?", example: "my accounting final" },
   "list": { q: "List the topics to cover", example: "ledgers, depreciation, tax", long: true },
   "hours": { q: "How many hours a day can you study?", example: "2" },
@@ -45,4 +45,9 @@ export const QUESTIONS: Record<string, Q> = {
   "url": { q: "Link to the source of that signal", example: "https://..." },
   "offer": { q: "In one sentence, what do you offer?", example: "We help logistics teams cut planning time" },
   "one sentence": { q: "In one sentence, why are you relevant to them?", example: "I work with similar fleet operators" },
+  "job title": { q: "What is the job title?", example: "Operations Manager" },
+  "company type": { q: "What kind of company is it?", example: "50-person logistics company" },
+  "location": { q: "Where is the role based?", example: "Pune, hybrid" },
+  "budget vs actual figures and known causes": { q: "Paste the budget vs actual figures and any known causes", long: true },
+  "invoice number, amount, due date": { q: "Invoice number, amount and due date", example: "INV-1042, 25,000, 2 Oct" },
 };

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Answer, Faq } from "@/components/Faq";
 import { PlanChooser } from "@/components/interactive/PlanChooser";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function Pricing() {
         </div>
       </section>
       <div className="wrap sim-stack" style={{ paddingBottom: 40 }}>
+        <Answer>Start on the free plan of the tools you are comparing. Upgrade only when you can name the specific limit or feature that blocked a real task, and check the official pricing page for current prices.</Answer>
         <PlanChooser />
         <section className="sim">
           <p className="eyebrow">Rules of thumb</p>
@@ -28,6 +30,11 @@ export default function Pricing() {
             <li><b>Can I cancel easily?</b> Prefer monthly while you are still testing.</li>
           </ol>
         </section>
+        <Faq items={[
+          ["Do I need a paid ChatGPT or Claude plan?", "Not to start. Test on the free plan with real tasks and pay only when a specific limit or feature blocks you."],
+          ["Why don't you list prices?", "Plans and prices change often, so a table here would go stale. We link to the official pages instead."],
+          ["Is a team plan different from a personal plan?", "Often yes: team and business plans usually add admin controls and different data terms. Compare them on the provider's own pages."],
+        ]} />
       </div>
     </>
   );

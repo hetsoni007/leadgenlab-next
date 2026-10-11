@@ -1,0 +1,228 @@
+[
+ {
+  "slug": "choosing-a-model",
+  "title": "How to choose an AI model for your product",
+  "answer": "Choose the smallest, cheapest model that passes your own test set. Larger models usually cost more and respond slower, so prove you need them. Re-test whenever the vendor releases a new version.",
+  "sections": [
+   {
+    "h": "Start from the task and the quality bar",
+    "p": "Write down what a good answer looks like before you compare any model. Without a bar, every model looks fine in a demo.",
+    "l": []
+   },
+   {
+    "h": "Build a small test set first",
+    "p": "Collect 20 to 50 real examples, including awkward ones. Record the expected outcome or a scoring rubric for each.",
+    "l": []
+   },
+   {
+    "h": "Compare on four things",
+    "p": "For each candidate, measure:",
+    "l": [
+     "Task success on your test set",
+     "Latency users will actually feel",
+     "Cost per completed task, not per word",
+     "Failure modes: what it gets wrong and how often"
+    ]
+   },
+   {
+    "h": "Know the tiers",
+    "p": "Vendors typically offer a fast, low-cost tier, a balanced tier and a most-capable tier. Anthropic's news page describes Claude Haiku 5.5 as its fastest and cheapest small model, Claude Sonnet 5.5 as faster and cheaper than Sonnet 5, and Claude Opus 5.5 as lower cost to run than Opus 5. Check each vendor's own page for current names, limits and prices.",
+    "l": []
+   },
+   {
+    "h": "Re-test when anything changes",
+    "p": "Model updates can change behaviour. Re-run your test set before switching versions and roll out gradually.",
+    "l": []
+   }
+  ],
+  "faq": [
+   [
+    "How do I pick between a small and a large model?",
+    "Run your own test set on both. If the smaller model meets your quality bar, use it; you save cost and latency."
+   ],
+   [
+    "Should I trust published benchmarks?",
+    "Treat benchmarks as a starting point. Vendor-reported results may not reflect your task, so confirm on your own examples."
+   ],
+   [
+    "How often should I re-evaluate?",
+    "Whenever you change model version, prompt or tools, and on a regular schedule such as quarterly."
+   ]
+  ],
+  "verify": [
+   "Current model names and availability",
+   "Context window and output limits",
+   "Pricing and rate limits",
+   "Data-use and retention terms"
+  ]
+ },
+ {
+  "slug": "api-basics",
+  "title": "LLM API basics for product teams",
+  "answer": "An LLM API call sends a model name, instructions and messages, and returns generated text or tool calls. Keep keys on the server, handle errors and rate limits, and measure cost per task.",
+  "sections": [
+   {
+    "h": "What a request contains",
+    "p": "Most APIs take the same building blocks:",
+    "l": [
+     "The model to use",
+     "System instructions that set role and rules",
+     "The conversation messages",
+     "Settings such as maximum output length",
+     "Optional tools the model may call"
+    ]
+   },
+   {
+    "h": "Streaming and latency",
+    "p": "Streaming returns text as it is generated, which makes long answers feel faster. Design the interface for partial output.",
+    "l": []
+   },
+   {
+    "h": "Tool use",
+    "p": "Tool use lets a model request an action, such as a database lookup. Your code decides whether to run it, so you control permissions and validation.",
+    "l": []
+   },
+   {
+    "h": "Errors, limits and cost",
+    "p": "Plan for the following from day one:",
+    "l": [
+     "Rate limits and retries with backoff",
+     "Timeouts and fallbacks",
+     "Cost tracking per user and per task",
+     "Logging that avoids storing sensitive data"
+    ]
+   },
+   {
+    "h": "Keep secrets safe",
+    "p": "Never ship API keys to the browser. Call the model from a server you control and load keys from environment variables.",
+    "l": []
+   }
+  ],
+  "faq": [
+   [
+    "Where should my API key live?",
+    "On the server, in an environment variable or secrets manager, never in client-side code or a public repository."
+   ],
+   [
+    "How do I control cost?",
+    "Choose the smallest adequate model, cap output length, cache repeated work and monitor cost per task."
+   ],
+   [
+    "What happens when I hit a rate limit?",
+    "Retry with exponential backoff, queue non-urgent work and show users a clear message."
+   ]
+  ],
+  "verify": [
+   "Official API reference and SDKs for your provider",
+   "Rate limits for your plan",
+   "Data handling terms for API traffic"
+  ]
+ },
+ {
+  "slug": "building-agents-safely",
+  "title": "How to build AI agents safely",
+  "answer": "Give an agent the least access it needs, require human approval for consequential actions, log every step, and test with realistic failures before launch.",
+  "sections": [
+   {
+    "h": "Define a narrow scope",
+    "p": "State exactly what the agent may do and what it must never do. A narrow agent is easier to test and trust.",
+    "l": []
+   },
+   {
+    "h": "Apply least privilege",
+    "p": "Use scoped credentials and read-only access wherever possible. Separate accounts for testing and production.",
+    "l": []
+   },
+   {
+    "h": "Add approval gates",
+    "p": "Require a person to approve actions that send, spend, delete or publish.",
+    "l": []
+   },
+   {
+    "h": "Plan for prompt injection",
+    "p": "Content the agent reads, such as emails or web pages, can contain instructions meant to hijack it. Treat external content as untrusted and limit what it can trigger.",
+    "l": []
+   },
+   {
+    "h": "Log and review",
+    "p": "Record each step, tool call and result so you can audit and improve behaviour.",
+    "l": []
+   },
+   {
+    "h": "Roll out gradually",
+    "p": "Start with a small group, monitor, and keep a rollback path.",
+    "l": []
+   }
+  ],
+  "faq": [
+   [
+    "What is the biggest risk with agents?",
+    "Actions taken without enough oversight, combined with access that is broader than needed."
+   ],
+   [
+    "What is prompt injection?",
+    "Hidden instructions inside content an agent reads that try to change its behaviour. Defend by limiting permissions and validating tool calls."
+   ],
+   [
+    "Should an agent ever act without approval?",
+    "Only for low-risk, reversible actions you have tested thoroughly, and with monitoring."
+   ]
+  ],
+  "verify": [
+   "Which actions need approval in your platform",
+   "How to revoke access quickly",
+   "What logs the platform keeps"
+  ]
+ },
+ {
+  "slug": "evaluating-ai-changes",
+  "title": "How to evaluate an AI change before you ship it",
+  "answer": "Build a fixed test set, define pass criteria, run the old and new version side by side, and only roll out when the new version is better on the metrics that matter and not worse on safety.",
+  "sections": [
+   {
+    "h": "Create an evaluation set",
+    "p": "Use anonymised real cases, including difficult ones. Keep the set stable so results are comparable over time.",
+    "l": []
+   },
+   {
+    "h": "Define pass criteria",
+    "p": "Decide in advance what counts as success and what is a blocker, such as unsupported claims or policy violations.",
+    "l": []
+   },
+   {
+    "h": "Run old versus new",
+    "p": "Compare task success, unsupported claims, tool calls, latency and full cost.",
+    "l": []
+   },
+   {
+    "h": "Review a sample by hand",
+    "p": "Automated scores miss problems. Read a sample of outputs, especially failures.",
+    "l": []
+   },
+   {
+    "h": "Release in stages",
+    "p": "Expand gradually, watch for regressions, and keep a rollback route.",
+    "l": []
+   }
+  ],
+  "faq": [
+   [
+    "How big should an evaluation set be?",
+    "Start with 20 to 50 representative cases and grow it from real failures."
+   ],
+   [
+    "Can another model grade the outputs?",
+    "It can help at scale, but validate its grading against human review first."
+   ],
+   [
+    "When should I stop a rollout?",
+    "When a safety metric regresses or error rates exceed the thresholds you set beforehand."
+   ]
+  ],
+  "verify": [
+   "Your provider's guidance on model deprecation and versions",
+   "How to pin a model version",
+   "Your logging and privacy requirements"
+  ]
+ }
+]

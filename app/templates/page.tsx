@@ -5,7 +5,7 @@ import { ResultsCalculator } from "@/components/interactive/ResultsCalculator";
 
 export const metadata: Metadata = {
   title: "Outbound lead generation templates with Claude",
-  description: "Four review-first outbound workflows: ICP and account research, signal-based first touch, follow-ups with stop rules, and reply triage. Each has prompts, gates and a test log.",
+  description: "Four review-first outbound workflows for Claude: ICP research, first touch, follow-ups and reply triage, each with prompts, gates and a test log.",
   alternates: { canonical: "/templates" },
 };
 

@@ -404,3 +404,14 @@ html[data-text="l"]{--prose-size:21.5px}
   .lu-main{grid-column:1/-1}
   .lu-meta{grid-column:1/-1;flex-direction:row;align-items:center;gap:12px}
 }
+
+/* answer-first blocks */
+.qa{display:grid;gap:14px;margin-top:12px}
+.qa-item{padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.7);border:1px solid var(--glass-line)}
+.qa-item h3{font-size:19px;margin-bottom:6px}
+.qa-item p{margin:0;color:var(--muted)}
+.audit-table{width:100%;border-collapse:collapse;font-size:15px}
+.audit-table th,.audit-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.audit-table thead th{font:700 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.badge{display:inline-block;padding:2px 10px;border-radius:99px;font:700 11px var(--sans);letter-spacing:.06em;text-transform:uppercase;background:rgba(99,102,241,.14);color:var(--accent)}
+.badge-warn{background:rgba(232,89,12,.12);color:#9a3a05}

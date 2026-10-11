@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import roles from "@/content/roles.json";
 import prompts from "@/content/prompts.json";
+import { Answer, Faq } from "@/components/Faq";
+import { JsonLd } from "@/components/JsonLd";
 import { PromptActions } from "@/components/interactive/GuidedPrompt";
 import { shortDesc, shortTitle } from "@/lib/seo";
 
@@ -27,6 +29,13 @@ export default async function RolePage({ params }: Props) {
   if (!r) notFound();
   const byId = new Map(prompts.map((p) => [p.id, p]));
   const others = roles.filter((x) => x.slug !== slug).slice(0, 3);
+  const who = r.title.toLowerCase();
+  const faq: [string, string][] = [
+    [`What are the best ChatGPT and Claude tasks for ${who}?`, `Start with: ${r.tasks.map((t) => t.name.toLowerCase()).join(", ")}. Each has a ready prompt and a check to run before you rely on the result.`],
+    [`How do ${who} run a safe AI pilot?`, r.pilot.join(" ")],
+    [`What should ${who} measure?`, `Track: ${r.metrics.map((m) => m.toLowerCase()).join("; ")}.`],
+    [`What are the main risks for ${who}?`, `${r.risks.join("; ")}.`],
+  ];
 
   return (
     <>
@@ -39,7 +48,10 @@ export default async function RolePage({ params }: Props) {
         </div>
       </section>
 
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "HowTo", name: `Run an AI pilot for ${who}`, description: r.short,
+        step: r.pilot.map((t, i) => ({ "@type": "HowToStep", position: i + 1, text: t })) }} />
       <div className="wrap sim-stack">
+        <Answer>{r.short} {r.why}</Answer>
         <section className="sim">
           <p className="eyebrow">Where to start</p>
           <h2>High-value tasks</h2>
@@ -76,6 +88,7 @@ export default async function RolePage({ params }: Props) {
             <Link className="btn btn-ghost btn-sm" href="/compare">Test ChatGPT vs Claude on your task</Link>
           </div>
         </section>
+        <Faq items={faq} />
       </div>
 
       <div className="wrap">

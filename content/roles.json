@@ -328,5 +328,195 @@
    "Plausible but incorrect code",
    "Over-trusting generated tests"
   ]
+ },
+ {
+  "slug": "hr",
+  "title": "HR and people teams",
+  "short": "Draft clearer roles and fairer interviews while keeping people decisions human.",
+  "why": "HR work mixes routine documents with sensitive decisions about people. AI can speed up drafting and structure, but fairness, privacy and final judgement stay with people.",
+  "tasks": [
+   {
+    "name": "Job description",
+    "what": "Clear purpose, requirements and an honest note on difficulty.",
+    "prompt": "35",
+    "check": "Check requirements and legal wording."
+   },
+   {
+    "name": "Structured interview questions",
+    "what": "Same questions, same scoring, for every candidate.",
+    "prompt": "36",
+    "check": "Review for fairness with your HR lead."
+   },
+   {
+    "name": "Meeting minutes",
+    "what": "Turn notes into decisions and owners.",
+    "prompt": "03",
+    "check": "Confirm owners and dates."
+   },
+   {
+    "name": "Write an SOP",
+    "what": "Document a recurring HR process.",
+    "prompt": "22",
+    "check": "Walk it through with the process owner."
+   }
+  ],
+  "pilot": [
+   "Pick one recurring document, such as job descriptions.",
+   "Draft three with the prompt and compare against your usual versions.",
+   "Have a colleague review for fairness and clarity before use."
+  ],
+  "metrics": [
+   "Hours per document",
+   "Edits needed before approval",
+   "Consistency across hiring managers",
+   "Candidate feedback on clarity"
+  ],
+  "risks": [
+   "Biased or exclusionary wording",
+   "Pasting personal data about employees or candidates",
+   "Using AI output as the decision rather than as input"
+  ]
+ },
+ {
+  "slug": "finance",
+  "title": "Finance and accounting",
+  "short": "Explain numbers and chase invoices faster while every figure is checked by a person.",
+  "why": "Finance teams spend time explaining numbers and writing routine messages. AI helps with wording and structure, but accuracy and approval are non-negotiable.",
+  "tasks": [
+   {
+    "name": "Variance commentary",
+    "what": "Explain budget versus actual to non-finance readers.",
+    "prompt": "37",
+    "check": "Verify every figure and cause."
+   },
+   {
+    "name": "Payment reminder",
+    "what": "A firm, respectful follow-up for overdue invoices.",
+    "prompt": "38",
+    "check": "Confirm details and contract terms."
+   },
+   {
+    "name": "Compare two options",
+    "what": "Structured trade-offs with stated assumptions.",
+    "prompt": "07",
+    "check": "Challenge the assumptions."
+   },
+   {
+    "name": "Extract data from messy text",
+    "what": "Turn text into a table, leaving gaps blank.",
+    "prompt": "10",
+    "check": "Spot-check rows against the source."
+   }
+  ],
+  "pilot": [
+   "Choose one monthly commentary you write today.",
+   "Draft it with the prompt using anonymised or approved figures.",
+   "Compare time and accuracy; have a colleague check every number."
+  ],
+  "metrics": [
+   "Minutes per commentary",
+   "Number of figure errors caught in review",
+   "Time to resolve overdue invoices"
+  ],
+  "risks": [
+   "Wrong or invented figures",
+   "Sharing confidential financials with a consumer account",
+   "Over-relying on a fluent explanation"
+  ]
+ },
+ {
+  "slug": "support",
+  "title": "Customer support",
+  "short": "Draft consistent replies and help-centre content, with a person approving what customers see.",
+  "why": "Support teams answer the same questions many times. AI can draft replies and macros quickly, while accuracy, tone and policy remain with trained staff.",
+  "tasks": [
+   {
+    "name": "Draft a support reply",
+    "what": "Use only approved information; say what is unknown.",
+    "prompt": "21",
+    "check": "Always review before sending."
+   },
+   {
+    "name": "Summarise a ticket thread",
+    "what": "Five-line summary with next step and owner.",
+    "prompt": "24",
+    "check": "Check for sensitive data before sharing."
+   },
+   {
+    "name": "Reusable macro",
+    "what": "Turn a resolved ticket into a template.",
+    "prompt": "39",
+    "check": "Approve before use with customers."
+   },
+   {
+    "name": "Help-centre article",
+    "what": "From a resolved issue to a clear article.",
+    "prompt": "40",
+    "check": "Test the steps yourself."
+   }
+  ],
+  "pilot": [
+   "Pick your five most common questions.",
+   "Create approved macros and help articles with the prompts.",
+   "Measure handling time and reopened tickets for two weeks."
+  ],
+  "metrics": [
+   "Time to first response",
+   "Reopened tickets",
+   "Customer satisfaction on assisted replies",
+   "Edits needed per draft"
+  ],
+  "risks": [
+   "Wrong policy statements sent to customers",
+   "Pasting customer personal data into a consumer account",
+   "Tone that does not match your brand"
+  ]
+ },
+ {
+  "slug": "operations",
+  "title": "Operations and project teams",
+  "short": "Find repeated work, document it, and keep status updates honest.",
+  "why": "Operations teams run on documented processes and clear communication. AI can help draft SOPs and updates, but only the people doing the work can confirm what is true.",
+  "tasks": [
+   {
+    "name": "Find repeated work",
+    "what": "Group last week's tasks and spot candidates to simplify.",
+    "prompt": "23",
+    "check": "Validate with the team."
+   },
+   {
+    "name": "Write a clear SOP",
+    "what": "Turn how you do a task into steps.",
+    "prompt": "22",
+    "check": "Walk through it with someone who does the task."
+   },
+   {
+    "name": "Weekly status update",
+    "what": "Progress, risks, decisions needed, next week.",
+    "prompt": "25",
+    "check": "State risks plainly."
+   },
+   {
+    "name": "Meeting minutes",
+    "what": "Decisions, actions, open questions.",
+    "prompt": "03",
+    "check": "Confirm owners and dates."
+   }
+  ],
+  "pilot": [
+   "List last week's tasks and run the repeated-work prompt.",
+   "Write the SOP for the top candidate and test it with a colleague.",
+   "Compare time and errors for two weeks."
+  ],
+  "metrics": [
+   "Hours saved on the chosen process",
+   "Errors or rework",
+   "Team confidence in the SOP"
+  ],
+  "risks": [
+   "Documenting a broken process as if it were good",
+   "Status updates that hide risk",
+   "Sharing confidential project data"
+  ]
  }
 ]

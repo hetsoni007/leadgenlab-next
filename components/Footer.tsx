@@ -16,6 +16,8 @@ export function Footer() {
           <Link href="/templates">Outbound templates</Link>
           <Link href="/roles">Guides by role</Link>
           <Link href="/features">Feature guides</Link>
+          <Link href="/developers">Developer guides</Link>
+          <Link href="/roundup/2026-10">Monthly roundup</Link>
           <Link href="/safety">Safety and privacy</Link>
           <Link href="/pricing">Plans and cost</Link>
           <Link href="/india">Using AI in India</Link>
@@ -31,6 +33,8 @@ export function Footer() {
           <h2>Work with us</h2>
           <Link href="/contact">Request an AI workflow audit</Link>
           <Link href="/quiz">AI readiness quiz</Link>
+          <Link href="/sample-audit">Sample audit</Link>
+          <Link href="/results">Results and evidence</Link>
           <Link href="/services">Services</Link>
           <Link href="/about">About</Link>
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

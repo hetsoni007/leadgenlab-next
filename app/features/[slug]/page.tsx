@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import features from "@/content/features.json";
+import { Answer, Faq } from "@/components/Faq";
 import { OFFICIAL } from "@/lib/official";
 import { shortDesc, shortTitle } from "@/lib/seo";
 
@@ -25,6 +26,12 @@ export default async function FeaturePage({ params }: Props) {
   const f = features.find((x) => x.slug === slug);
   if (!f) notFound();
   const others = features.filter((x) => x.slug !== slug);
+  const faq: [string, string][] = [
+    [`What are ${f.title.toLowerCase()} in AI assistants?`, f.what],
+    [`Why do ${f.title.toLowerCase()} matter?`, f.why],
+    [`How do I test ${f.title.toLowerCase()} safely?`, f.test.join(" ")],
+    [`What can go wrong with ${f.title.toLowerCase()}?`, `${f.risks.join("; ")}.`],
+  ];
   return (
     <>
       <section className="page-hero">
@@ -36,6 +43,7 @@ export default async function FeaturePage({ params }: Props) {
         </div>
       </section>
       <div className="wrap sim-stack">
+        <Answer>{f.what} {f.why}</Answer>
         <section className="sim">
           <h2>Why it matters</h2>
           <p>{f.why}</p>
@@ -65,6 +73,7 @@ export default async function FeaturePage({ params }: Props) {
             We describe the idea, not each product&apos;s exact limits, because they change. Latest changes are in our <Link href="/ai-updates">release explainers</Link>.
           </p>
         </section>
+        <Faq items={faq} />
       </div>
       <div className="wrap">
         <section className="related">
