@@ -1,27 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DailyFeed } from "@/components/DailyFeed";
-import { FlowDiagram, HeroArt, Icon, StatStrip } from "@/components/art";
-import { allPages, childrenOf, dateOf, formatDate, SITE } from "@/lib/content";
+import { HeroArt, Icon, StatStrip } from "@/components/art";
+import { allPages, childrenOf, SITE } from "@/lib/content";
+import prompts from "@/content/prompts.json";
+import templates from "@/content/templates.json";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
-function short(d: string, n: number) {
-  if (d.length <= n) return d;
-  const cut = d.slice(0, n);
-  return cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:\s]+$/, "") + "…";
-}
+const PATHS = [
+  { href: "/learn", icon: "explain", title: "New to ChatGPT or Claude?", text: "Pick a tool, practise a prompt, get answers to common questions." },
+  { href: "/prompts", icon: "try", title: "Prompt library", text: "Copy-ready prompts, with a guide that fills the blanks for you." },
+  { href: "/templates", icon: "measure", title: "Outbound workflows", text: "Review-first lead generation templates with a test log." },
+];
 
 export default function Home() {
-  const updates = childrenOf("ai-updates");
-  const [top, ...rest] = updates;
-  const compact = rest.slice(0, 4);
-  const grid = updates.slice(0, 5);
   const stats = [
-    { value: updates.length, label: "release explainers" },
+    { value: childrenOf("ai-updates").length, label: "release explainers" },
+    { value: prompts.length, label: "ready prompts" },
+    { value: templates.length, label: "outbound workflows" },
     { value: allPages.filter((p) => p.path.startsWith("/guides/")).length, label: "beginner guides" },
-    { value: allPages.filter((p) => p.path.startsWith("/workflows/")).length, label: "workflow samples" },
-    { value: 20, label: "answered newcomer questions" },
   ];
   return (
     <>
@@ -43,62 +41,28 @@ export default function Home() {
                 <Link className="btn btn-ghost" href="/learn">New to AI? Start here</Link>
               )}
             </div>
-            <div className="proof">
-              <span>Official sources linked</span>
-              <span>Plain English + technical</span>
-              <span>Tested when reproducible</span>
-            </div>
           </div>
 
-          <aside className="panel" aria-label="Latest releases">
-            <div className="panel-head"><span className="live">Latest releases</span><Link href="/ai-updates">View all →</Link></div>
-            {top && (
-              <Link href={top.path} className="feature">
-                {dateOf(top) && <time dateTime={dateOf(top)!}>{formatDate(dateOf(top)!)}</time>}
-                <h3>{top.title}</h3>
-              </Link>
-            )}
-            <ul className="mini">
-              {compact.map((p) => (
-                <li key={p.path}>
-                  <Link href={p.path}>
-                    {dateOf(p) && <time dateTime={dateOf(p)!}>{formatDate(dateOf(p)!).replace(/ 20\d\d$/, "")}</time>}
-                    <span>{short(p.title, 78)}</span>
+          <nav className="panel start" aria-label="Start here">
+            <p className="panel-head"><span>Start here</span></p>
+            <ul>
+              {PATHS.map((p) => (
+                <li key={p.href}>
+                  <Link href={p.href}>
+                    <span className="start-icon"><Icon name={p.icon} size={26} /></span>
+                    <span className="start-text"><b>{p.title}</b><small>{p.text}</small></span>
+                    <span className="start-go" aria-hidden="true">→</span>
                   </Link>
                 </li>
               ))}
             </ul>
-          </aside>
+          </nav>
         </div>
       </section>
 
       <StatStrip stats={stats} />
 
       <DailyFeed />
-
-      <FlowDiagram />
-
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <div>
-              <p className="eyebrow">What changed</p>
-              <h2>Explained, not just announced</h2>
-            </div>
-            <Link href="/ai-updates">All updates →</Link>
-          </div>
-          <div className="cards">
-            {grid.map((p, i) => (
-              <Link key={p.path} href={p.path} className={`card${i === 0 ? " card-wide" : ""}`}>
-                {dateOf(p) && <time dateTime={dateOf(p)!}>{formatDate(dateOf(p)!)}</time>}
-                <h3>{p.title}</h3>
-                {p.description && <p>{p.description}</p>}
-                <span className="more">Read the explainer →</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section">
         <div className="wrap">
