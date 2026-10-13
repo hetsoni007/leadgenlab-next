@@ -8,6 +8,7 @@ export type Page = {
   intro: string;
   html: string;
   legacy: string;
+  category?: string;
 };
 
 export const SITE = {

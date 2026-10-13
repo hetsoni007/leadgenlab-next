@@ -5,7 +5,7 @@ import { Answer, Faq } from "@/components/Faq";
 
 export const metadata: Metadata = {
   title: "ChatGPT and Claude guides by role",
-  description: "Practical ChatGPT and Claude guides for sales, marketing, HR, finance, support, operations, founders, students, creators and developers.",
+  description: "Practical ChatGPT and Claude guides for HR, developers, and UI/UX designers, plus other roles. Copy prompts, see sample outputs, and follow a productivity pilot.",
   alternates: { canonical: "/roles" },
 };
 
@@ -15,14 +15,20 @@ export default function Roles() {
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">By role</p>
-          <h1>Start with the tasks that fit your job</h1>
-          <p className="lede">Each guide gives you five or six high-value tasks, the prompt for each, a two-week pilot you can run, and the risks to watch.</p>
+          <h1>Practical AI workflows for your role</h1>
+          <p className="lede">Start with focused guides for HR, developers, and UI/UX designers. Each includes copy-ready prompts, sample outputs, a step-by-step productivity pilot, and checks to keep the work reliable.</p>
         </div>
       </section>
       <div className="wrap sim-stack" style={{ paddingBottom: 56 }}>
-        <Answer>Each guide gives you five or six high-value tasks for one job, a ready prompt for each, a two-week pilot and the risks to watch. Start with the guide closest to your role and run the pilot before you roll anything out.</Answer>
+        <Answer>Choose your role to see practical tasks, ready-to-use prompts with example outputs, and a two-week pilot to measure productivity gains safely.</Answer>
         <div className="cards">
-          {roles.map((r) => (
+          {roles.filter((r) => ["hr", "developers", "ui-ux-designers"].includes(r.slug)).map((r) => (
+            <Link key={r.slug} href={`/roles/${r.slug}`} className="card"><span className="tag">Featured role guide</span><h3>{r.title}</h3><p>{r.short}</p><span className="more">Explore prompts and workflow →</span></Link>
+          ))}
+        </div>
+        <h2>More role guides</h2>
+        <div className="cards">
+          {roles.filter((r) => !["hr", "developers", "ui-ux-designers"].includes(r.slug)).map((r) => (
             <Link key={r.slug} href={`/roles/${r.slug}`} className="card">
               <span className="tag">Role guide</span>
               <h3>{r.title}</h3>

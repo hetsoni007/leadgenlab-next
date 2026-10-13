@@ -2,14 +2,14 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-export type Item = { path: string; title: string; description: string; date: string | null; dateLabel: string | null; tool: string };
+export type Item = { path: string; title: string; description: string; date: string | null; dateLabel: string | null; tool: string; category?: string };
 
 export function UpdateBrowser({ items }: { items: Item[] }) {
   const [q, setQ] = useState("");
-  const [tool, setTool] = useState("All");
-  const tools = useMemo(() => ["All", ...Array.from(new Set(items.map((i) => i.tool))).sort()], [items]);
+  const [filter, setFilter] = useState("All");
+  const filters = useMemo(() => ["All", "Usage news", ...Array.from(new Set(items.map((i) => i.tool))).sort()], [items]);
   const shown = items.filter((i) =>
-    (tool === "All" || i.tool === tool) &&
+    (filter === "All" || (filter === "Usage news" ? i.category === "usage" : i.tool === filter)) &&
     (!q.trim() || (i.title + " " + i.description).toLowerCase().includes(q.trim().toLowerCase())));
 
   return (
@@ -20,10 +20,10 @@ export function UpdateBrowser({ items }: { items: Item[] }) {
           <input id="ub-q" type="search" value={q} placeholder="Try “pricing”, “agents” or “policy”" onChange={(e) => setQ(e.target.value)} />
         </div>
         <div className="field">
-          <span className="label">Filter by tool</span>
-          <div className="seg" role="group" aria-label="Filter by tool">
-            {tools.map((t) => (
-              <button key={t} type="button" aria-pressed={tool === t} onClick={() => setTool(t)}>{t}</button>
+          <span className="label">Filter by topic or tool</span>
+          <div className="seg" role="group" aria-label="Filter updates by topic or tool">
+            {filters.map((t) => (
+              <button key={t} type="button" aria-pressed={filter === t} onClick={() => setFilter(t)}>{t}</button>
             ))}
           </div>
         </div>

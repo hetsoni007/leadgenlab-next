@@ -65,7 +65,7 @@ export default async function ContentPage({ params }: Props) {
   const items: Item[] = children.map((c) => ({
     path: c.path, title: c.title, description: c.description,
     date: dateOf(c), dateLabel: dateOf(c) ? formatDate(dateOf(c)!) : null,
-    tool: toolOf(c.title + " " + c.path),
+    tool: toolOf(c.title + " " + c.path), category: c.category,
   }));
   const replaceBody = path === "/roadmaps";
   const body = showBody && !replaceBody ? rewriteLinks(page.html, page.legacy) : "";

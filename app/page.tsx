@@ -11,6 +11,7 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 const PATHS = [
   { href: "/learn", icon: "explain", title: "New to ChatGPT or Claude?", text: "Pick a tool, practise a prompt, get answers to common questions." },
   { href: "/prompts", icon: "try", title: "Prompt library", text: "Copy-ready prompts, with a guide that fills the blanks for you." },
+  { href: "/roles", icon: "measure", title: "Find your role workflow", text: "Practical guides for HR, developers, and UI/UX designers." },
   { href: "/templates", icon: "measure", title: "Outbound workflows", text: "Review-first lead generation templates with a test log." },
 ];
 
@@ -30,8 +31,8 @@ export default function Home() {
             <p className="eyebrow">AI workflow consulting · Claude + ChatGPT</p>
             <h1>Turn AI releases into <span className="grad-text">working</span> workflows.</h1>
             <p className="lede">
-              We track every Claude and ChatGPT release, explain what actually changed, and help sales,
-              marketing and operations teams turn it into a measurable process.
+              We track Claude and ChatGPT releases and turn them into useful workflows for HR, developers,
+              and UI/UX designers—with role-specific prompts, demo outputs, and step-by-step productivity guides.
             </p>
             <div className="actions">
               <Link className="btn" href="/contact">Request an AI workflow audit</Link>
