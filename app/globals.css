@@ -233,9 +233,6 @@ html[data-text="l"]{--prose-size:21.5px}
 .phases li{padding:8px 14px;border-radius:999px;background:rgba(99,102,241,.12);font-weight:600;font-size:14px}
 .browser-controls{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px;margin:6px 0 16px;padding:18px;border-radius:var(--radius);background:var(--glass);border:1px solid var(--glass-line)}
 @media(max-width:760px){.browser-controls{grid-template-columns:1fr}}
-.demo-output{margin:14px 0;padding:12px 14px;border:1px solid var(--glass-line);border-radius:14px;background:rgba(255,255,255,.56)}
-.demo-output summary{cursor:pointer;font-weight:700;color:var(--brand);}
-.demo-output>p{margin:10px 0;color:var(--muted)}
 /* quiz */
 .q{margin:0 0 22px;padding:20px;border-radius:18px;border:1px solid var(--glass-line);background:rgba(255,255,255,.6)}
 .q legend{padding:0 6px;font:600 18px/1.4 var(--serif)}

@@ -4,15 +4,15 @@ import { useMemo, useState } from "react";
 
 export type UpdateItem = {
   date: string; dateLabel: string; tool: "Claude" | "ChatGPT" | string; title: string; summary: string;
-  url: string; source: string; ours?: string; unconfirmed?: boolean; category?: string;
+  url: string; source: string; ours?: string; unconfirmed?: boolean;
 };
 
-const TABS = ["All", "Claude", "ChatGPT", "Usage news"] as const;
+const TABS = ["All", "Claude", "ChatGPT"] as const;
 
 export function LatestUpdates({ items, checked }: { items: UpdateItem[]; checked: string }) {
   const [tab, setTab] = useState<(typeof TABS)[number]>("All");
   const list = useMemo(
-    () => items.filter((i) => tab === "Usage news" ? i.category === "usage" : tab === "All" || i.tool === tab).slice(0, 6),
+    () => items.filter((i) => tab === "All" || i.tool === tab).slice(0, 6),
     [items, tab],
   );
 

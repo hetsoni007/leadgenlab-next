@@ -6,7 +6,6 @@ import prompts from "@/content/prompts.json";
 import { Answer, Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { PromptActions } from "@/components/interactive/GuidedPrompt";
-import type { PromptItem } from "@/components/interactive/PromptLibrary";
 import { shortDesc, shortTitle } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -28,7 +27,7 @@ export default async function RolePage({ params }: Props) {
   const { slug } = await params;
   const r = roles.find((x) => x.slug === slug);
   if (!r) notFound();
-  const byId = new Map((prompts as PromptItem[]).map((p) => [p.id, p]));
+  const byId = new Map(prompts.map((p) => [p.id, p]));
   const others = roles.filter((x) => x.slug !== slug).slice(0, 3);
   const who = r.title.toLowerCase();
   const faq: [string, string][] = [
@@ -64,7 +63,6 @@ export default async function RolePage({ params }: Props) {
                   <h3>{t.name}</h3>
                   <p className="muted" style={{ margin: 0 }}>{t.what}</p>
                   {p && <pre className="prompt-text">{p.prompt}</pre>}
-                  {p?.demoOutput && <details className="demo-output"><summary>See a demo with fictional data</summary><p><b>Demo output (fictional):</b></p><pre className="prompt-text">{p.demoOutput}</pre><p className="muted">Uses made-up sample data. Replace it with approved information and verify the result before use.</p></details>}
                   <p className="check"><b>Check:</b> {t.check}</p>
                   {p && <PromptActions prompt={p.prompt} title={t.name} />}
                 </article>

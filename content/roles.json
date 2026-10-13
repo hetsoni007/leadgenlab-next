@@ -1,628 +1,522 @@
 [
-  {
-    "slug": "sales",
-    "title": "Sales and business development",
-    "short": "Research accounts faster and send messages that are actually relevant.",
-    "why": "Most selling time goes to research, writing and follow-up. AI can prepare drafts quickly, but the value comes from relevance and accuracy, which stay with you.",
-    "tasks": [
-      {
-        "name": "Account research brief",
-        "what": "Turn public information into a one-page brief.",
-        "prompt": "11",
-        "check": "Verify every fact and date."
-      },
-      {
-        "name": "First-touch message",
-        "what": "Draft a short message tied to a public signal.",
-        "prompt": "12",
-        "check": "Remove any claim you cannot source."
-      },
-      {
-        "name": "Follow-up that adds value",
-        "what": "Add something useful instead of nagging.",
-        "prompt": "13",
-        "check": "Would you want to receive it?"
-      },
-      {
-        "name": "Objection handling",
-        "what": "Prepare honest answers to common objections.",
-        "prompt": "14",
-        "check": "Only claim what you can back up."
-      },
-      {
-        "name": "Call preparation",
-        "what": "Goal, questions, likely objections, next step.",
-        "prompt": "15",
-        "check": "Rewrite questions in your voice."
-      }
-    ],
-    "pilot": [
-      "Pick 10 accounts you would contact this week anyway.",
-      "Use the brief and first-touch prompts for 5 of them. Do the other 5 as usual.",
-      "Compare time spent and reply quality after two weeks."
-    ],
-    "metrics": [
-      "Minutes of prep per account",
-      "Reply rate and quality of replies",
-      "Meetings booked",
-      "Number of factual corrections needed"
-    ],
-    "risks": [
-      "Invented facts about a prospect",
-      "Over-personalised messages that feel invasive",
-      "Pasting private customer data into a consumer account"
-    ]
-  },
-  {
-    "slug": "marketing",
-    "title": "Marketing and growth",
-    "short": "Turn one idea into many formats without losing accuracy or brand voice.",
-    "why": "Content takes time to adapt for each channel. AI is useful for first drafts and variations. Strategy, claims and brand voice remain human decisions.",
-    "tasks": [
-      {
-        "name": "Release to post",
-        "what": "Explain a product or industry change for your audience.",
-        "prompt": "16",
-        "check": "Link every claim to its source."
-      },
-      {
-        "name": "Headline variations",
-        "what": "Generate options, then choose and test.",
-        "prompt": "17",
-        "check": "Remove anything that overpromises."
-      },
-      {
-        "name": "Repurpose an article",
-        "what": "One article into email, posts and a script.",
-        "prompt": "18",
-        "check": "Make sure the versions agree."
-      },
-      {
-        "name": "Audience questions",
-        "what": "What your audience searches for at each stage.",
-        "prompt": "19",
-        "check": "Check against real customer language."
-      },
-      {
-        "name": "Brand voice check",
-        "what": "Flag lines that do not sound like you.",
-        "prompt": "20",
-        "check": "Keep the final say."
-      }
-    ],
-    "pilot": [
-      "Choose one article you already published.",
-      "Create the email and three posts with the repurpose prompt.",
-      "Publish, then compare time spent and engagement with your usual process."
-    ],
-    "metrics": [
-      "Hours per asset",
-      "Clicks and saves",
-      "Qualified enquiries",
-      "Edits needed before publishing"
-    ],
-    "risks": [
-      "Unsourced statistics",
-      "Generic copy that sounds like everyone else",
-      "Publishing without a fact check"
-    ]
-  },
-  {
-    "slug": "founders",
-    "title": "Founders and business owners",
-    "short": "Make decisions faster and find the repeated work worth simplifying.",
-    "why": "You carry many decisions and a lot of repeated work. AI can structure your thinking and draft routine documents, but it cannot know your business context unless you provide it.",
-    "tasks": [
-      {
-        "name": "Compare two options",
-        "what": "Structured trade-offs with assumptions stated.",
-        "prompt": "07",
-        "check": "Challenge the assumptions."
-      },
-      {
-        "name": "Pre-mortem a plan",
-        "what": "Imagine it failed and list the likely reasons.",
-        "prompt": "09",
-        "check": "Act on the top two."
-      },
-      {
-        "name": "Weekly update",
-        "what": "Turn bullets into a clear update.",
-        "prompt": "25",
-        "check": "State risks plainly."
-      },
-      {
-        "name": "Write an SOP",
-        "what": "Turn how you do it into steps.",
-        "prompt": "22",
-        "check": "Walk through it with someone."
-      },
-      {
-        "name": "Find repeated work",
-        "what": "Spot what to simplify or automate.",
-        "prompt": "23",
-        "check": "Validate with the team."
-      }
-    ],
-    "pilot": [
-      "List last week's tasks and run the repeated-work prompt.",
-      "Pick one repeated task and write its SOP.",
-      "Trial a draft-then-review routine for two weeks and measure time saved."
-    ],
-    "metrics": [
-      "Hours saved on the chosen task",
-      "Error or rework rate",
-      "Team confidence",
-      "Cost of tools versus time saved"
-    ],
-    "risks": [
-      "Treating confident advice as fact",
-      "Sharing confidential financials or customer data",
-      "Automating a messy process"
-    ]
-  },
-  {
-    "slug": "students",
-    "title": "Students and teachers",
-    "short": "Learn faster and practise better, while keeping the learning yours.",
-    "why": "AI is good at explanations, practice and feedback when you stay active. It is a poor substitute for doing the thinking, and your school's rules come first.",
-    "tasks": [
-      {
-        "name": "Explain it simply",
-        "what": "Plain-English explanation with an analogy.",
-        "prompt": "04",
-        "check": "Check against course notes."
-      },
-      {
-        "name": "Reading list",
-        "what": "A week-by-week plan with checks.",
-        "prompt": "08",
-        "check": "Confirm the resources exist."
-      },
-      {
-        "name": "Practice quiz",
-        "what": "Questions and an answer key.",
-        "prompt": "26",
-        "check": "Verify the key."
-      },
-      {
-        "name": "Study plan",
-        "what": "A realistic day-by-day schedule.",
-        "prompt": "27",
-        "check": "Adjust to your energy."
-      },
-      {
-        "name": "Teach it back",
-        "what": "Explain it and get feedback.",
-        "prompt": "28",
-        "check": "Compare feedback with notes."
-      },
-      {
-        "name": "Lesson outline (teachers)",
-        "what": "A structured lesson in minutes.",
-        "prompt": "29",
-        "check": "Check accuracy and age fit."
-      }
-    ],
-    "pilot": [
-      "Choose one topic you find hard.",
-      "Use explain-simply, then teach-it-back, then a practice quiz.",
-      "Check answers against your notes and record what you got wrong."
-    ],
-    "metrics": [
-      "Quiz scores over time",
-      "Time to understand a topic",
-      "Number of errors caught",
-      "Confidence in explaining it unaided"
-    ],
-    "risks": [
-      "Submitting AI text as your own work against school rules",
-      "Learning a confident but wrong explanation",
-      "Skipping the effort that builds understanding"
-    ]
-  },
-  {
-    "slug": "creators",
-    "title": "Creators and freelancers",
-    "short": "Draft faster and keep your own voice and your clients' trust.",
-    "why": "Creators and freelancers sell judgement and voice. AI can speed up structure and variations, while your taste and honesty are what clients pay for.",
-    "tasks": [
-      {
-        "name": "Tighten a draft",
-        "what": "Cleaner version without changing meaning.",
-        "prompt": "01",
-        "check": "Compare against the original."
-      },
-      {
-        "name": "Sound more human",
-        "what": "Shorter sentences, concrete examples.",
-        "prompt": "05",
-        "check": "Read it aloud."
-      },
-      {
-        "name": "Headline variations",
-        "what": "Options grouped by approach.",
-        "prompt": "17",
-        "check": "Test two, drop hype."
-      },
-      {
-        "name": "Repurpose one piece",
-        "what": "Multiple formats from one source.",
-        "prompt": "18",
-        "check": "Keep facts consistent."
-      },
-      {
-        "name": "Audience questions",
-        "what": "What people want answered.",
-        "prompt": "19",
-        "check": "Pick the ones you can answer well."
-      }
-    ],
-    "pilot": [
-      "Take one finished piece and repurpose it into three formats.",
-      "Time yourself against your normal process.",
-      "Ask a client or friend which version reads better."
-    ],
-    "metrics": [
-      "Hours per deliverable",
-      "Revision rounds with clients",
-      "Engagement on published pieces",
-      "How often you override the draft"
-    ],
-    "risks": [
-      "Losing your distinct voice",
-      "Disclosure rules about AI use with clients or platforms",
-      "Copying phrases too close to other work"
-    ]
-  },
-  {
-    "slug": "developers",
-    "title": "Developers and IT",
-    "short": "Understand, test and review code faster while a person stays accountable.",
-    "why": "AI can explain code, draft tests and spot risks quickly. It can also be confidently wrong, so every suggestion needs running, reading and review.",
-    "tasks": [
-      {
-        "name": "Explain this code",
-        "what": "Step-by-step plain-English explanation.",
-        "prompt": "31",
-        "check": "Read the code and confirm."
-      },
-      {
-        "name": "Write tests",
-        "what": "Normal, edge and failure cases.",
-        "prompt": "32",
-        "check": "See each test fail first."
-      },
-      {
-        "name": "Review a change",
-        "what": "Bugs, security, missing tests.",
-        "prompt": "33",
-        "check": "A person approves."
-      },
-      {
-        "name": "Debug from an error",
-        "what": "Ranked causes and quick checks.",
-        "prompt": "34",
-        "check": "Understand before you apply a fix."
-      },
-      {
-        "name": "Extract structured data",
-        "what": "Messy text into a table.",
-        "prompt": "10",
-        "check": "Spot-check against the source."
-      },
-      {
-        "name": "Write a bug report",
-        "what": "Turn reproduction notes into a useful issue.",
-        "prompt": "45",
-        "check": "Reproduce it and confirm the environment."
-      },
-      {
-        "name": "Document an API",
-        "what": "Create a reference from the actual contract.",
-        "prompt": "46",
-        "check": "Verify examples against the implementation."
-      },
-      {
-        "name": "Plan an incremental refactor",
-        "what": "Break a change into safe, testable steps.",
-        "prompt": "47",
-        "check": "Run tests and inspect the diff."
-      }
-    ],
-    "pilot": [
-      "Pick one low-risk task: test drafting, bug reports, API documentation, or a small refactor.",
-      "Set a baseline for time, correctness, and review effort on representative work.",
-      "Use sanitised inputs; verify output against code, contracts, and tests.",
-      "Compare results after two weeks and keep only workflows that improve quality or time."
-    ],
-    "metrics": [
-      "Time to first correct draft",
-      "Defects caught before merge",
-      "Review and rework time",
-      "Tests or docs accepted with minor edits"
-    ],
-    "risks": [
-      "Pasting secrets or proprietary code into a consumer account",
-      "Plausible but incorrect code",
-      "Over-trusting generated tests"
-    ]
-  },
-  {
-    "slug": "hr",
-    "title": "HR and people teams",
-    "short": "Draft clearer roles and fairer interviews while keeping people decisions human.",
-    "why": "HR work mixes routine documents with sensitive decisions about people. AI can speed up drafting and structure, but fairness, privacy and final judgement stay with people.",
-    "tasks": [
-      {
-        "name": "Job description",
-        "what": "Clear purpose, requirements and an honest note on difficulty.",
-        "prompt": "35",
-        "check": "Check requirements and legal wording."
-      },
-      {
-        "name": "Structured interview questions",
-        "what": "Same questions, same scoring, for every candidate.",
-        "prompt": "36",
-        "check": "Review for fairness with your HR lead."
-      },
-      {
-        "name": "Meeting minutes",
-        "what": "Turn notes into decisions and owners.",
-        "prompt": "03",
-        "check": "Confirm owners and dates."
-      },
-      {
-        "name": "Write an SOP",
-        "what": "Document a recurring HR process.",
-        "prompt": "22",
-        "check": "Walk it through with the process owner."
-      },
-      {
-        "name": "First-week onboarding plan",
-        "what": "Build a welcoming schedule with named owners.",
-        "prompt": "41",
-        "check": "Confirm policy links and owners."
-      },
-      {
-        "name": "Employee policy FAQ",
-        "what": "Answer common questions from approved policy text.",
-        "prompt": "42",
-        "check": "Have the policy owner verify every answer."
-      },
-      {
-        "name": "Feedback themes",
-        "what": "Find patterns in anonymised survey comments.",
-        "prompt": "43",
-        "check": "Check counts and protect small groups."
-      },
-      {
-        "name": "Review discussion guide",
-        "what": "Prepare an evidence-based, balanced conversation.",
-        "prompt": "44",
-        "check": "A human owns all performance decisions."
-      }
-    ],
-    "pilot": [
-      "Choose one repeatable, low-risk document such as onboarding or a policy FAQ.",
-      "Use fictional or approved anonymised information to draft it; compare with your current version.",
-      "Ask the process owner and a colleague to check accuracy, accessibility, and fairness before use.",
-      "Track drafting time and edits for two weeks; expand only if quality holds."
-    ],
-    "metrics": [
-      "Minutes to first usable draft",
-      "Edits needed before approval",
-      "Consistency across teams",
-      "New-hire or employee feedback"
-    ],
-    "risks": [
-      "Biased or exclusionary wording",
-      "Pasting personal data about employees or candidates",
-      "Using AI output as the decision rather than as input"
-    ]
-  },
-  {
-    "slug": "finance",
-    "title": "Finance and accounting",
-    "short": "Explain numbers and chase invoices faster while every figure is checked by a person.",
-    "why": "Finance teams spend time explaining numbers and writing routine messages. AI helps with wording and structure, but accuracy and approval are non-negotiable.",
-    "tasks": [
-      {
-        "name": "Variance commentary",
-        "what": "Explain budget versus actual to non-finance readers.",
-        "prompt": "37",
-        "check": "Verify every figure and cause."
-      },
-      {
-        "name": "Payment reminder",
-        "what": "A firm, respectful follow-up for overdue invoices.",
-        "prompt": "38",
-        "check": "Confirm details and contract terms."
-      },
-      {
-        "name": "Compare two options",
-        "what": "Structured trade-offs with stated assumptions.",
-        "prompt": "07",
-        "check": "Challenge the assumptions."
-      },
-      {
-        "name": "Extract data from messy text",
-        "what": "Turn text into a table, leaving gaps blank.",
-        "prompt": "10",
-        "check": "Spot-check rows against the source."
-      }
-    ],
-    "pilot": [
-      "Choose one monthly commentary you write today.",
-      "Draft it with the prompt using anonymised or approved figures.",
-      "Compare time and accuracy; have a colleague check every number."
-    ],
-    "metrics": [
-      "Minutes per commentary",
-      "Number of figure errors caught in review",
-      "Time to resolve overdue invoices"
-    ],
-    "risks": [
-      "Wrong or invented figures",
-      "Sharing confidential financials with a consumer account",
-      "Over-relying on a fluent explanation"
-    ]
-  },
-  {
-    "slug": "support",
-    "title": "Customer support",
-    "short": "Draft consistent replies and help-centre content, with a person approving what customers see.",
-    "why": "Support teams answer the same questions many times. AI can draft replies and macros quickly, while accuracy, tone and policy remain with trained staff.",
-    "tasks": [
-      {
-        "name": "Draft a support reply",
-        "what": "Use only approved information; say what is unknown.",
-        "prompt": "21",
-        "check": "Always review before sending."
-      },
-      {
-        "name": "Summarise a ticket thread",
-        "what": "Five-line summary with next step and owner.",
-        "prompt": "24",
-        "check": "Check for sensitive data before sharing."
-      },
-      {
-        "name": "Reusable macro",
-        "what": "Turn a resolved ticket into a template.",
-        "prompt": "39",
-        "check": "Approve before use with customers."
-      },
-      {
-        "name": "Help-centre article",
-        "what": "From a resolved issue to a clear article.",
-        "prompt": "40",
-        "check": "Test the steps yourself."
-      }
-    ],
-    "pilot": [
-      "Pick your five most common questions.",
-      "Create approved macros and help articles with the prompts.",
-      "Measure handling time and reopened tickets for two weeks."
-    ],
-    "metrics": [
-      "Time to first response",
-      "Reopened tickets",
-      "Customer satisfaction on assisted replies",
-      "Edits needed per draft"
-    ],
-    "risks": [
-      "Wrong policy statements sent to customers",
-      "Pasting customer personal data into a consumer account",
-      "Tone that does not match your brand"
-    ]
-  },
-  {
-    "slug": "operations",
-    "title": "Operations and project teams",
-    "short": "Find repeated work, document it, and keep status updates honest.",
-    "why": "Operations teams run on documented processes and clear communication. AI can help draft SOPs and updates, but only the people doing the work can confirm what is true.",
-    "tasks": [
-      {
-        "name": "Find repeated work",
-        "what": "Group last week's tasks and spot candidates to simplify.",
-        "prompt": "23",
-        "check": "Validate with the team."
-      },
-      {
-        "name": "Write a clear SOP",
-        "what": "Turn how you do a task into steps.",
-        "prompt": "22",
-        "check": "Walk through it with someone who does the task."
-      },
-      {
-        "name": "Weekly status update",
-        "what": "Progress, risks, decisions needed, next week.",
-        "prompt": "25",
-        "check": "State risks plainly."
-      },
-      {
-        "name": "Meeting minutes",
-        "what": "Decisions, actions, open questions.",
-        "prompt": "03",
-        "check": "Confirm owners and dates."
-      }
-    ],
-    "pilot": [
-      "List last week's tasks and run the repeated-work prompt.",
-      "Write the SOP for the top candidate and test it with a colleague.",
-      "Compare time and errors for two weeks."
-    ],
-    "metrics": [
-      "Hours saved on the chosen process",
-      "Errors or rework",
-      "Team confidence in the SOP"
-    ],
-    "risks": [
-      "Documenting a broken process as if it were good",
-      "Status updates that hide risk",
-      "Sharing confidential project data"
-    ]
-  },
-  {
-    "slug": "ui-ux-designers",
-    "title": "UI/UX designers and researchers",
-    "short": "Move from briefs and research notes to clearer flows, accessible interfaces, and testable design decisions.",
-    "why": "AI can help structure research, explore interface copy, and find gaps in flows. Your research evidence, design judgement, and direct contact with users should guide the final experience.",
-    "tasks": [
-      {
-        "name": "Map user flows",
-        "what": "Turn a brief into goals, steps, decisions, and edge cases.",
-        "prompt": "48",
-        "check": "Validate with product requirements and research."
-      },
-      {
-        "name": "Synthesize usability notes",
-        "what": "Separate observations from interpretation.",
-        "prompt": "49",
-        "check": "Trace each theme back to the notes."
-      },
-      {
-        "name": "Accessibility critique",
-        "what": "Identify checks for keyboard, labels, contrast, and errors.",
-        "prompt": "50",
-        "check": "Test with assistive technology and people."
-      },
-      {
-        "name": "Write interface microcopy",
-        "what": "Draft clear copy across loading, empty, success, and error states.",
-        "prompt": "51",
-        "check": "Match real system behavior and terminology."
-      },
-      {
-        "name": "Create a usability test script",
-        "what": "Prepare neutral tasks and follow-up questions.",
-        "prompt": "52",
-        "check": "Pilot it and remove leading language."
-      },
-      {
-        "name": "Build a component checklist",
-        "what": "List components, states, responsive needs, and open questions.",
-        "prompt": "53",
-        "check": "Review against the design system and engineering constraints."
-      }
-    ],
-    "pilot": [
-      "Choose one upcoming flow or research task with a clear question.",
-      "Use AI to draft a flow, test script, or synthesis from approved, anonymised inputs.",
-      "Trace every claim back to a requirement or research note; label assumptions.",
-      "Review with a researcher, designer, and engineer, then test with users over two weeks."
-    ],
-    "metrics": [
-      "Time from brief to reviewable first draft",
-      "Issues found before handoff",
-      "Usability task success and confusion points",
-      "Accessibility issues fixed before release"
-    ],
-    "risks": [
-      "Treating generated personas or themes as real research evidence",
-      "Exposing participant data or confidential product plans",
-      "Missing edge cases or accessibility needs",
-      "Copy that promises behavior the product does not deliver"
-    ]
-  }
+ {
+  "slug": "sales",
+  "title": "Sales and business development",
+  "short": "Research accounts faster and send messages that are actually relevant.",
+  "why": "Most selling time goes to research, writing and follow-up. AI can prepare drafts quickly, but the value comes from relevance and accuracy, which stay with you.",
+  "tasks": [
+   {
+    "name": "Account research brief",
+    "what": "Turn public information into a one-page brief.",
+    "prompt": "11",
+    "check": "Verify every fact and date."
+   },
+   {
+    "name": "First-touch message",
+    "what": "Draft a short message tied to a public signal.",
+    "prompt": "12",
+    "check": "Remove any claim you cannot source."
+   },
+   {
+    "name": "Follow-up that adds value",
+    "what": "Add something useful instead of nagging.",
+    "prompt": "13",
+    "check": "Would you want to receive it?"
+   },
+   {
+    "name": "Objection handling",
+    "what": "Prepare honest answers to common objections.",
+    "prompt": "14",
+    "check": "Only claim what you can back up."
+   },
+   {
+    "name": "Call preparation",
+    "what": "Goal, questions, likely objections, next step.",
+    "prompt": "15",
+    "check": "Rewrite questions in your voice."
+   }
+  ],
+  "pilot": [
+   "Pick 10 accounts you would contact this week anyway.",
+   "Use the brief and first-touch prompts for 5 of them. Do the other 5 as usual.",
+   "Compare time spent and reply quality after two weeks."
+  ],
+  "metrics": [
+   "Minutes of prep per account",
+   "Reply rate and quality of replies",
+   "Meetings booked",
+   "Number of factual corrections needed"
+  ],
+  "risks": [
+   "Invented facts about a prospect",
+   "Over-personalised messages that feel invasive",
+   "Pasting private customer data into a consumer account"
+  ]
+ },
+ {
+  "slug": "marketing",
+  "title": "Marketing and growth",
+  "short": "Turn one idea into many formats without losing accuracy or brand voice.",
+  "why": "Content takes time to adapt for each channel. AI is useful for first drafts and variations. Strategy, claims and brand voice remain human decisions.",
+  "tasks": [
+   {
+    "name": "Release to post",
+    "what": "Explain a product or industry change for your audience.",
+    "prompt": "16",
+    "check": "Link every claim to its source."
+   },
+   {
+    "name": "Headline variations",
+    "what": "Generate options, then choose and test.",
+    "prompt": "17",
+    "check": "Remove anything that overpromises."
+   },
+   {
+    "name": "Repurpose an article",
+    "what": "One article into email, posts and a script.",
+    "prompt": "18",
+    "check": "Make sure the versions agree."
+   },
+   {
+    "name": "Audience questions",
+    "what": "What your audience searches for at each stage.",
+    "prompt": "19",
+    "check": "Check against real customer language."
+   },
+   {
+    "name": "Brand voice check",
+    "what": "Flag lines that do not sound like you.",
+    "prompt": "20",
+    "check": "Keep the final say."
+   }
+  ],
+  "pilot": [
+   "Choose one article you already published.",
+   "Create the email and three posts with the repurpose prompt.",
+   "Publish, then compare time spent and engagement with your usual process."
+  ],
+  "metrics": [
+   "Hours per asset",
+   "Clicks and saves",
+   "Qualified enquiries",
+   "Edits needed before publishing"
+  ],
+  "risks": [
+   "Unsourced statistics",
+   "Generic copy that sounds like everyone else",
+   "Publishing without a fact check"
+  ]
+ },
+ {
+  "slug": "founders",
+  "title": "Founders and business owners",
+  "short": "Make decisions faster and find the repeated work worth simplifying.",
+  "why": "You carry many decisions and a lot of repeated work. AI can structure your thinking and draft routine documents, but it cannot know your business context unless you provide it.",
+  "tasks": [
+   {
+    "name": "Compare two options",
+    "what": "Structured trade-offs with assumptions stated.",
+    "prompt": "07",
+    "check": "Challenge the assumptions."
+   },
+   {
+    "name": "Pre-mortem a plan",
+    "what": "Imagine it failed and list the likely reasons.",
+    "prompt": "09",
+    "check": "Act on the top two."
+   },
+   {
+    "name": "Weekly update",
+    "what": "Turn bullets into a clear update.",
+    "prompt": "25",
+    "check": "State risks plainly."
+   },
+   {
+    "name": "Write an SOP",
+    "what": "Turn how you do it into steps.",
+    "prompt": "22",
+    "check": "Walk through it with someone."
+   },
+   {
+    "name": "Find repeated work",
+    "what": "Spot what to simplify or automate.",
+    "prompt": "23",
+    "check": "Validate with the team."
+   }
+  ],
+  "pilot": [
+   "List last week's tasks and run the repeated-work prompt.",
+   "Pick one repeated task and write its SOP.",
+   "Trial a draft-then-review routine for two weeks and measure time saved."
+  ],
+  "metrics": [
+   "Hours saved on the chosen task",
+   "Error or rework rate",
+   "Team confidence",
+   "Cost of tools versus time saved"
+  ],
+  "risks": [
+   "Treating confident advice as fact",
+   "Sharing confidential financials or customer data",
+   "Automating a messy process"
+  ]
+ },
+ {
+  "slug": "students",
+  "title": "Students and teachers",
+  "short": "Learn faster and practise better, while keeping the learning yours.",
+  "why": "AI is good at explanations, practice and feedback when you stay active. It is a poor substitute for doing the thinking, and your school's rules come first.",
+  "tasks": [
+   {
+    "name": "Explain it simply",
+    "what": "Plain-English explanation with an analogy.",
+    "prompt": "04",
+    "check": "Check against course notes."
+   },
+   {
+    "name": "Reading list",
+    "what": "A week-by-week plan with checks.",
+    "prompt": "08",
+    "check": "Confirm the resources exist."
+   },
+   {
+    "name": "Practice quiz",
+    "what": "Questions and an answer key.",
+    "prompt": "26",
+    "check": "Verify the key."
+   },
+   {
+    "name": "Study plan",
+    "what": "A realistic day-by-day schedule.",
+    "prompt": "27",
+    "check": "Adjust to your energy."
+   },
+   {
+    "name": "Teach it back",
+    "what": "Explain it and get feedback.",
+    "prompt": "28",
+    "check": "Compare feedback with notes."
+   },
+   {
+    "name": "Lesson outline (teachers)",
+    "what": "A structured lesson in minutes.",
+    "prompt": "29",
+    "check": "Check accuracy and age fit."
+   }
+  ],
+  "pilot": [
+   "Choose one topic you find hard.",
+   "Use explain-simply, then teach-it-back, then a practice quiz.",
+   "Check answers against your notes and record what you got wrong."
+  ],
+  "metrics": [
+   "Quiz scores over time",
+   "Time to understand a topic",
+   "Number of errors caught",
+   "Confidence in explaining it unaided"
+  ],
+  "risks": [
+   "Submitting AI text as your own work against school rules",
+   "Learning a confident but wrong explanation",
+   "Skipping the effort that builds understanding"
+  ]
+ },
+ {
+  "slug": "creators",
+  "title": "Creators and freelancers",
+  "short": "Draft faster and keep your own voice and your clients' trust.",
+  "why": "Creators and freelancers sell judgement and voice. AI can speed up structure and variations, while your taste and honesty are what clients pay for.",
+  "tasks": [
+   {
+    "name": "Tighten a draft",
+    "what": "Cleaner version without changing meaning.",
+    "prompt": "01",
+    "check": "Compare against the original."
+   },
+   {
+    "name": "Sound more human",
+    "what": "Shorter sentences, concrete examples.",
+    "prompt": "05",
+    "check": "Read it aloud."
+   },
+   {
+    "name": "Headline variations",
+    "what": "Options grouped by approach.",
+    "prompt": "17",
+    "check": "Test two, drop hype."
+   },
+   {
+    "name": "Repurpose one piece",
+    "what": "Multiple formats from one source.",
+    "prompt": "18",
+    "check": "Keep facts consistent."
+   },
+   {
+    "name": "Audience questions",
+    "what": "What people want answered.",
+    "prompt": "19",
+    "check": "Pick the ones you can answer well."
+   }
+  ],
+  "pilot": [
+   "Take one finished piece and repurpose it into three formats.",
+   "Time yourself against your normal process.",
+   "Ask a client or friend which version reads better."
+  ],
+  "metrics": [
+   "Hours per deliverable",
+   "Revision rounds with clients",
+   "Engagement on published pieces",
+   "How often you override the draft"
+  ],
+  "risks": [
+   "Losing your distinct voice",
+   "Disclosure rules about AI use with clients or platforms",
+   "Copying phrases too close to other work"
+  ]
+ },
+ {
+  "slug": "developers",
+  "title": "Developers and IT",
+  "short": "Understand, test and review code faster while a person stays accountable.",
+  "why": "AI can explain code, draft tests and spot risks quickly. It can also be confidently wrong, so every suggestion needs running, reading and review.",
+  "tasks": [
+   {
+    "name": "Explain this code",
+    "what": "Step-by-step plain-English explanation.",
+    "prompt": "31",
+    "check": "Read the code and confirm."
+   },
+   {
+    "name": "Write tests",
+    "what": "Normal, edge and failure cases.",
+    "prompt": "32",
+    "check": "See each test fail first."
+   },
+   {
+    "name": "Review a change",
+    "what": "Bugs, security, missing tests.",
+    "prompt": "33",
+    "check": "A person approves."
+   },
+   {
+    "name": "Debug from an error",
+    "what": "Ranked causes and quick checks.",
+    "prompt": "34",
+    "check": "Understand before you apply a fix."
+   },
+   {
+    "name": "Extract structured data",
+    "what": "Messy text into a table.",
+    "prompt": "10",
+    "check": "Spot-check against the source."
+   }
+  ],
+  "pilot": [
+   "Pick one small, low-risk module.",
+   "Use explain, tests and review prompts on it.",
+   "Measure time to understand and the defects found, versus your usual process."
+  ],
+  "metrics": [
+   "Time to understand unfamiliar code",
+   "Defects caught before merge",
+   "Test coverage added",
+   "Review time per change"
+  ],
+  "risks": [
+   "Pasting secrets or proprietary code into a consumer account",
+   "Plausible but incorrect code",
+   "Over-trusting generated tests"
+  ]
+ },
+ {
+  "slug": "hr",
+  "title": "HR and people teams",
+  "short": "Draft clearer roles and fairer interviews while keeping people decisions human.",
+  "why": "HR work mixes routine documents with sensitive decisions about people. AI can speed up drafting and structure, but fairness, privacy and final judgement stay with people.",
+  "tasks": [
+   {
+    "name": "Job description",
+    "what": "Clear purpose, requirements and an honest note on difficulty.",
+    "prompt": "35",
+    "check": "Check requirements and legal wording."
+   },
+   {
+    "name": "Structured interview questions",
+    "what": "Same questions, same scoring, for every candidate.",
+    "prompt": "36",
+    "check": "Review for fairness with your HR lead."
+   },
+   {
+    "name": "Meeting minutes",
+    "what": "Turn notes into decisions and owners.",
+    "prompt": "03",
+    "check": "Confirm owners and dates."
+   },
+   {
+    "name": "Write an SOP",
+    "what": "Document a recurring HR process.",
+    "prompt": "22",
+    "check": "Walk it through with the process owner."
+   }
+  ],
+  "pilot": [
+   "Pick one recurring document, such as job descriptions.",
+   "Draft three with the prompt and compare against your usual versions.",
+   "Have a colleague review for fairness and clarity before use."
+  ],
+  "metrics": [
+   "Hours per document",
+   "Edits needed before approval",
+   "Consistency across hiring managers",
+   "Candidate feedback on clarity"
+  ],
+  "risks": [
+   "Biased or exclusionary wording",
+   "Pasting personal data about employees or candidates",
+   "Using AI output as the decision rather than as input"
+  ]
+ },
+ {
+  "slug": "finance",
+  "title": "Finance and accounting",
+  "short": "Explain numbers and chase invoices faster while every figure is checked by a person.",
+  "why": "Finance teams spend time explaining numbers and writing routine messages. AI helps with wording and structure, but accuracy and approval are non-negotiable.",
+  "tasks": [
+   {
+    "name": "Variance commentary",
+    "what": "Explain budget versus actual to non-finance readers.",
+    "prompt": "37",
+    "check": "Verify every figure and cause."
+   },
+   {
+    "name": "Payment reminder",
+    "what": "A firm, respectful follow-up for overdue invoices.",
+    "prompt": "38",
+    "check": "Confirm details and contract terms."
+   },
+   {
+    "name": "Compare two options",
+    "what": "Structured trade-offs with stated assumptions.",
+    "prompt": "07",
+    "check": "Challenge the assumptions."
+   },
+   {
+    "name": "Extract data from messy text",
+    "what": "Turn text into a table, leaving gaps blank.",
+    "prompt": "10",
+    "check": "Spot-check rows against the source."
+   }
+  ],
+  "pilot": [
+   "Choose one monthly commentary you write today.",
+   "Draft it with the prompt using anonymised or approved figures.",
+   "Compare time and accuracy; have a colleague check every number."
+  ],
+  "metrics": [
+   "Minutes per commentary",
+   "Number of figure errors caught in review",
+   "Time to resolve overdue invoices"
+  ],
+  "risks": [
+   "Wrong or invented figures",
+   "Sharing confidential financials with a consumer account",
+   "Over-relying on a fluent explanation"
+  ]
+ },
+ {
+  "slug": "support",
+  "title": "Customer support",
+  "short": "Draft consistent replies and help-centre content, with a person approving what customers see.",
+  "why": "Support teams answer the same questions many times. AI can draft replies and macros quickly, while accuracy, tone and policy remain with trained staff.",
+  "tasks": [
+   {
+    "name": "Draft a support reply",
+    "what": "Use only approved information; say what is unknown.",
+    "prompt": "21",
+    "check": "Always review before sending."
+   },
+   {
+    "name": "Summarise a ticket thread",
+    "what": "Five-line summary with next step and owner.",
+    "prompt": "24",
+    "check": "Check for sensitive data before sharing."
+   },
+   {
+    "name": "Reusable macro",
+    "what": "Turn a resolved ticket into a template.",
+    "prompt": "39",
+    "check": "Approve before use with customers."
+   },
+   {
+    "name": "Help-centre article",
+    "what": "From a resolved issue to a clear article.",
+    "prompt": "40",
+    "check": "Test the steps yourself."
+   }
+  ],
+  "pilot": [
+   "Pick your five most common questions.",
+   "Create approved macros and help articles with the prompts.",
+   "Measure handling time and reopened tickets for two weeks."
+  ],
+  "metrics": [
+   "Time to first response",
+   "Reopened tickets",
+   "Customer satisfaction on assisted replies",
+   "Edits needed per draft"
+  ],
+  "risks": [
+   "Wrong policy statements sent to customers",
+   "Pasting customer personal data into a consumer account",
+   "Tone that does not match your brand"
+  ]
+ },
+ {
+  "slug": "operations",
+  "title": "Operations and project teams",
+  "short": "Find repeated work, document it, and keep status updates honest.",
+  "why": "Operations teams run on documented processes and clear communication. AI can help draft SOPs and updates, but only the people doing the work can confirm what is true.",
+  "tasks": [
+   {
+    "name": "Find repeated work",
+    "what": "Group last week's tasks and spot candidates to simplify.",
+    "prompt": "23",
+    "check": "Validate with the team."
+   },
+   {
+    "name": "Write a clear SOP",
+    "what": "Turn how you do a task into steps.",
+    "prompt": "22",
+    "check": "Walk through it with someone who does the task."
+   },
+   {
+    "name": "Weekly status update",
+    "what": "Progress, risks, decisions needed, next week.",
+    "prompt": "25",
+    "check": "State risks plainly."
+   },
+   {
+    "name": "Meeting minutes",
+    "what": "Decisions, actions, open questions.",
+    "prompt": "03",
+    "check": "Confirm owners and dates."
+   }
+  ],
+  "pilot": [
+   "List last week's tasks and run the repeated-work prompt.",
+   "Write the SOP for the top candidate and test it with a colleague.",
+   "Compare time and errors for two weeks."
+  ],
+  "metrics": [
+   "Hours saved on the chosen process",
+   "Errors or rework",
+   "Team confidence in the SOP"
+  ],
+  "risks": [
+   "Documenting a broken process as if it were good",
+   "Status updates that hide risk",
+   "Sharing confidential project data"
+  ]
+ }
 ]

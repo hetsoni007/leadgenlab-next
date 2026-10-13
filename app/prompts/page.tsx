@@ -3,8 +3,8 @@ import { PromptLibrary, type PromptItem } from "@/components/interactive/PromptL
 import prompts from "@/content/prompts.json";
 
 export const metadata: Metadata = {
-  title: "AI prompt library for HR, developers, and designers",
-  description: "53 copy-ready ChatGPT and Claude prompts by role, with demo outputs and practical checks for HR, developers, UI/UX designers, and more.",
+  title: "AI prompt library for work and study",
+  description: "40 copy-ready prompts for ChatGPT and Claude, grouped by task and role, each with what to check before you rely on the answer.",
   alternates: { canonical: "/prompts" },
 };
 
@@ -16,9 +16,10 @@ export default function Prompts() {
       <section className="page-hero">
         <div className="wrap">
           <p className="eyebrow">Prompt library</p>
-          <h1>Role-specific prompts with sample outputs</h1>
+          <h1>Copy-ready prompts that work in ChatGPT and Claude</h1>
           <p className="lede">
-            Filter by role or task. Fill in the highlighted [brackets], inspect the demo, and verify the result before using it.
+            Fill in the highlighted [brackets], paste, and check the result. Each prompt says what to verify,
+            so you use the answer, not just accept it.
           </p>
         </div>
       </section>
